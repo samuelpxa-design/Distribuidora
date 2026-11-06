@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>DISTRIBUIDORA ROJAS PERALTA</title>
+ <link rel="icon" type="image/png" href="assets/img/favicon.png">
+ <meta name="theme-color" content="#0b0912">
+ <link rel="stylesheet" href="assets/css/app.css?v=4.0">
+</head>
+<body>
+ <div id="app-container">
+ <!-- SIDEBAR DE NAVEGACIÓN -->
+ <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo-icon">
+          <img src="assets/img/logo-sidebar.png" alt="Logo Distribuidora Rojas Peralta">
+        </div>
+        <div class="sidebar-brand">
+          <h2 id="sidebar-brand-name">DISTRIBUIDORA <span>ROJAS</span> PERALTA</h2>
+          <p>Sistema de gestión y distribución</p>
+        </div>
+        <button class="btn-sidebar-close" style="position:absolute; top:10px; right:10px;" onclick="toggleMobileSidebar()" aria-label="Cerrar Menú" title="Cerrar">✕</button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Principal</div>
+        <a class="nav-item active" data-view="dashboard">
+          <svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8v-10h-8v10zm0-18v6h8V3h-8z"/></svg>
+          Dashboard General
+        </a>
+        <a class="nav-item" data-view="pos">
+          <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+          Punto de Venta (POS)
+        </a>
+        <a class="nav-item" data-view="sales">
+          <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+          Ventas (Historial)
+        </a>
+
+        <div class="nav-section-title">Distribución & Almacén</div>
+        <a class="nav-item" data-view="trucks">
+          <svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+          Camiones & Rutas
+        </a>
+        <a class="nav-item" data-view="inventory">
+          <svg viewBox="0 0 24 24"><path d="M20 13H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1zM7 19c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM20 3H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zM7 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/></svg>
+          Inventario Central
+        </a>
+
+        <div class="nav-section-title">Facturación & Finanzas</div>
+        <a class="nav-item" data-view="reports">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2v-10h2v10zm4 0h-2v-4h2v4z"/></svg>
+          Reportes & Contabilidad
+        </a>
+        <a class="nav-item" data-view="customers">
+          <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+          Clientes & Crédito
+        </a>
+        <a class="nav-item" data-view="suppliers">
+          <svg viewBox="0 0 24 24"><path d="M20 7h-4V5c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zM10 5h4v2h-4V5zm10 15H4V9h16v11z"/></svg>
+          Proveedores & Suplidores
+        </a>
+        <a class="nav-item" data-view="payroll">
+          <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+          Nóminas & Empleados
+        </a>
+        <a class="nav-item" data-view="finance">
+          <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+          Gastos & Dividendos
+        </a>
+
+        <div class="nav-section-title">Configuración</div>
+        <a class="nav-item" data-view="settings">
+          <svg viewBox="0 0 24 24"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
+          Configuración & Perfil
+        </a>
+      </nav>
+ </aside>
+
+ <!-- OVERLAY PARA MENÚ MÓVIL -->
+ <div id="sidebar-overlay" class="sidebar-overlay" onclick="toggleMobileSidebar()"></div>
+
+ <!-- ÁREA PRINCIPAL -->
+ <main class="main-content">
+    <header class="header-bar">
+      <div style="display: flex; align-items: center; gap: 12px; min-width: 0;">
+        <button id="btn-sidebar-toggle" class="btn-sidebar-toggle" onclick="toggleMobileSidebar()" aria-label="Abrir Menú" title="Menú de Navegación">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
+        <div class="header-title">
+          <h1 id="current-view-title">Dashboard General</h1>
+        </div>
+      </div>
+      <div class="header-status">
+        <!-- BOTÓN DE MENÚ DE NOTIFICACIONES CON BADGE DE CONTEO EN VIVO -->
+        <div class="notification-dropdown-container" style="position: relative;">
+          <button id="btn-notification-bell" class="btn-notification-bell" onclick="toggleNotificationMenu(event)" title="Alertas y Notificaciones del Sistema">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+            <span id="notification-badge-count" class="notification-badge" style="display: none;">0</span>
+          </button>
+
+          <!-- PANEL DESPLEGABLE DE NOTIFICACIONES Y ALERTAS ERP -->
+          <div id="notification-menu-dropdown" class="notification-menu-dropdown">
+            <div class="notif-header">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h4 style="margin: 0; font-size: 14px; font-weight: 800; color: #ffffff;">Centro de Notificaciones & Alertas</h4>
+                <span id="notif-summary-tag" style="font-size: 11px; background: #7b2cbf; color: #fff; padding: 2px 8px; border-radius: 12px; font-weight: 700;">0 activas</span>
+              </div>
+              <div style="display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap;">
+                <button class="notif-tab active" onclick="filtrarNotificacionesTab('todas', event)">Todas</button>
+                <button class="notif-tab" onclick="filtrarNotificacionesTab('critica', event)">Críticas</button>
+                <button class="notif-tab" onclick="filtrarNotificacionesTab('payroll', event)">Nómina</button>
+                <button class="notif-tab" onclick="filtrarNotificacionesTab('inventario', event)">Inventario</button>
+              </div>
+            </div>
+
+            <div id="notif-items-list" class="notif-body">
+              <div style="text-align: center; padding: 20px; color: var(--color-text-muted); font-size: 12px;">
+                Cargando notificaciones...
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="badge-offline">SISTEMA LOCAL · SIN INTERNET</div>
+        <span style="font-size: 13px; font-weight: 600;" id="clock-display"></span>
+      </div>
+    </header>
+
+    <!-- BANNER DE ACTUALIZACIÓN EN VIVO DESDE GITHUB -->
+    <div id="update-notification-banner" style="display: none; background: #3c096c; color: #ffffff; padding: 10px 20px; font-weight: 700; font-size: 13px; border-bottom: 1px solid #5a189a; justify-content: space-between; align-items: center; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="display: inline-block; width: 10px; height: 10px; background: #22c55e; border-radius: 50%;"></span>
+        <span>¡Hay una nueva versión del sistema disponible!</span>
+      </div>
+      <button class="btn" style="background: #ffffff; color: #7b2cbf; font-weight: 800; padding: 5px 14px; font-size: 12px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" onclick="aplicarActualizacionEnVivo()">
+        Descargar & Actualizar Ahora
+      </button>
+    </div>
+
+ <div class="content-body">
+        <!-- VISTA 1: DASHBOARD EJECUTIVO -->
+        <section id="view-dashboard" class="view-panel active">
+          <!-- BARRA DE ACCESO RÁPIDO OPERATIVO -->
+          <div class="table-container" style="padding: 16px; margin-bottom: 20px; background: #fff; border-left: 4px solid var(--color-primary);">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+              <div>
+                <h3 style="margin: 0; font-size: 16px; color: var(--color-primary);">Panel Ejecutivo de Operaciones & Distribución</h3>
+                <p style="margin: 0; font-size: 12px; color: var(--color-text-muted);">Accesos directos de alta frecuencia operativa</p>
+              </div>
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button class="btn btn-primary" onclick="switchView('pos')">+ Nueva Venta (POS)</button>
+                <button class="btn btn-success" onclick="abrirModalEntradaCompra()">+ Entrada Mercancía</button>
+                <button class="btn btn-secondary" onclick="abrirModalCobroCXC()">+ Cobro CXC</button>
+                <button class="btn btn-secondary" onclick="abrirModalCargarCamion()">+ Despachar Vehículo</button>
+                <button class="btn btn-secondary" onclick="switchView('reports')">Ver Reportes</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- GRID DE METRICAS KPI CLAVE -->
+          <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 24px;">
+            <div class="kpi-card">
+              <div class="kpi-header"><span class="kpi-title">Ventas de Hoy</span></div>
+              <div class="kpi-value" id="kpi-ventas-hoy">RD$ 0.00</div>
+              <div class="kpi-subtext" id="kpi-facturas-count">0 Facturas Emitidas</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-header"><span class="kpi-title">Cuentas por Cobrar (CXC)</span></div>
+              <div class="kpi-value" id="kpi-cxc-pendiente" style="color: var(--color-warning);">RD$ 0.00</div>
+              <div class="kpi-subtext">Crédito a Clientes</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-header"><span class="kpi-title">Camiones Operando Hoy</span></div>
+              <div class="kpi-value" id="kpi-camiones-activos">0 / 0</div>
+              <div class="kpi-subtext">Vehículos en Despacho</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-header"><span class="kpi-title">Mercancía en Inventario</span></div>
+              <div class="kpi-value" id="kpi-inventario-costo" style="color: var(--color-primary);">RD$ 0.00</div>
+              <div class="kpi-subtext" id="kpi-capital-sub">Valor a costo</div>
+            </div>
+            <div class="kpi-card">
+              <div class="kpi-header"><span class="kpi-title">Ganancia Neta Mes</span></div>
+              <div class="kpi-value" id="kpi-ganancia-mes" style="color: var(--color-success);">RD$ 0.00</div>
+              <div class="kpi-subtext">Utilidad Neta Operativa</div>
+            </div>
+          </div>
+
+          <!-- ALERTAS DEL SISTEMA -->
+          <div id="dash-alertas-container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px;">
+            <div class="table-container" style="padding: 16px; border-left: 4px solid var(--color-warning);">
+              <h4 style="margin-bottom: 8px; color: var(--color-warning); font-size: 14px;">Alertas de Stock Bajo Mínimo</h4>
+              <div id="dash-alertas-inventario" style="font-size: 13px;">Cargando estado de almacenes...</div>
+            </div>
+
+            <div class="table-container" style="padding: 16px; border-left: 4px solid var(--color-primary);">
+              <h4 style="margin-bottom: 8px; color: var(--color-primary); font-size: 14px;">Comprobantes Fiscales (NCF)</h4>
+              <div id="dash-alertas-ncf" style="font-size: 13px;">Estado de camiones y caja principal.</div>
+            </div>
+          </div>
+
+          <!-- GRÁFICOS VISUALES & TABLAS SIDE-BY-SIDE -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;">
+            <!-- TOP 5 PRODUCTOS MÁS VENDIDOS -->
+            <div class="table-container">
+              <div class="table-header-bar">
+                <h3>Top 5 Productos Estrella del Mes</h3>
+              </div>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Producto</th>
+                    <th>Unidades</th>
+                    <th>Venta Total</th>
+                  </tr>
+                </thead>
+                <tbody id="tbl-dash-top-productos">
+                  <tr><td colspan="3" style="text-align:center;">Cargando top productos...</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- ESTADO DE VEHÍCULOS EN RUTA HOY -->
+            <div class="table-container">
+              <div class="table-header-bar">
+                <h3>Ventas de Vehículos en Ruta Hoy</h3>
+              </div>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Vehículo / Ruta</th>
+                    <th>Chofer Asignado</th>
+                    <th>Ventas Hoy (DOP)</th>
+                  </tr>
+                </thead>
+                <tbody id="tbl-dash-vehiculos-status">
+                  <tr><td colspan="3" style="text-align:center;">Cargando estado de flota...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- TABLA DE ÚLTIMAS VENTAS -->
+          <div class="table-container">
+            <div class="table-header-bar">
+              <h3>Últimas Transacciones Emitidas</h3>
+              <button class="btn btn-primary" onclick="switchView('sales')">Ver Historial Completo</button>
+            </div>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>NCF Fiscal</th>
+                  <th>Tipo NCF</th>
+                  <th>Cliente</th>
+                  <th>Almacén / Camión</th>
+                  <th>Tipo Pago</th>
+                  <th>Total (DOP)</th>
+                  <th>Fecha</th>
+                </tr>
+              </thead>
+              <tbody id="tbl-ultimas-ventas">
+                <tr><td colspan="8" style="text-align: center;">Cargando registros...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+ <!-- VISTA 2: PUNTO DE VENTA (POS) -->
+ <section id="view-pos" class="view-panel">
+ <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; background: #fff; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border-color);">
+ <div>
+ <h3 style="margin: 0; color: var(--color-primary);">Punto de Venta POS - Caja Principal</h3>
+ <p style="margin: 0; font-size: 12px; color: var(--color-text-muted);">Cobro ultrarrápido a Contado y Crédito con Facturación DGII</p>
+ </div>
+ <button class="btn btn-warning" onclick="abrirModalCierreCajaPOS()" style="font-weight: 700;">
+ Cierre & Cuadre Diario de Caja POS
+ </button>
+ </div>
+
+ <div class="pos-layout">
+ <div class="pos-products-panel">
+ <div style="display: flex; gap: 12px; align-items: center;">
+ <input type="text" id="pos-search" class="input-control" placeholder="Buscar por producto o código de barras... (Atajo: F2)">
+  <div style="display: flex; align-items: center; gap: 8px; background: #faf8fc; padding: 4px 12px; border-radius: 6px; border: 1px solid var(--border-color);">
+  <label style="font-size: 11px; font-weight: 800; color: #51475f; white-space: nowrap; text-transform: uppercase;"> Asignar a Camión / Origen:</label>
+ <select id="pos-almacen-select" class="input-control" style="width: 240px; font-weight: 700; background: #fff;" onchange="onPOSAlmacenChange()">
+ <option value="1">Almacén Principal Central</option>
+ </select>
+ </div>
+ </div>
+
+ <div class="table-container pos-table-watermark" style="flex: 1; overflow-y: auto;">
+ <table class="data-table">
+ <thead>
+ <tr>
+ <th>Código</th>
+ <th>Producto</th>
+ <th>Precio Mayorista</th>
+ <th>Stock Disp.</th>
+ <th>Acción</th>
+ </tr>
+ </thead>
+ <tbody id="pos-products-list">
+ <!-- Dinámico -->
+ </tbody>
+ </table>
+ </div>
+ </div>
+
+ <!-- CARRITO Y CHECKOUT POS -->
+ <div class="pos-cart-panel">
+ <div class="pos-cart-header">
+ <h3>Facturación & Cobro de Venta</h3>
+ <div id="pos-origen-badge" style="font-size: 11px; font-weight: 800; color: var(--color-primary); background: #f4edfa; padding: 4px 8px; border-radius: 4px; margin-top: 4px;">
+ Venta desde: Almacén Principal Central
+ </div>
+ </div>
+
+ <div class="pos-cart-items" id="pos-cart-items">
+ <div style="text-align: center; color: var(--color-text-muted); margin-top: 40px;">
+ Selecciona productos para armar la venta.
+ </div>
+ </div>
+
+ <div class="pos-cart-summary">
+ <div style="margin-bottom: 12px;">
+ <label style="font-size: 12px; font-weight: 700;">CLIENTE / RAZÓN SOCIAL:</label>
+ <select id="pos-cliente-select" class="input-control" style="margin-top: 4px;" onchange="onClienteSelectChange()">
+ <option value="1">1 - CLIENTE CONTADO / CONSUMIDOR FINAL</option>
+ </select>
+ </div>
+
+ <div style="margin-bottom: 12px;">
+ <label style="font-size: 12px; font-weight: 700;">FORMA DE PAGO:</label>
+ <select id="pos-pago-select" class="input-control" style="margin-top: 4px;">
+ <option value="Contado">Contado / Efectivo</option>
+ <option value="Credito">Crédito (Abono a 30 días)</option>
+ <option value="Transferencia">Transferencia Bancaria</option>
+ <option value="Cheque">Cheque</option>
+ </select>
+ </div>
+
+  <div style="margin-bottom: 12px; display: flex; align-items: center; justify-content: space-between; gap: 8px; background: #faf8fc; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--border-color);">
+    <label style="font-size: 11px; font-weight: 800; color: #51475f; uppercase">DESCUENTO DE VENTA (%):</label>
+    <div style="display: flex; align-items: center; gap: 4px; width: 110px;">
+      <input type="number" id="pos-descuento-pct" class="input-control" placeholder="0" min="0" max="100" step="0.5" value="0" style="text-align: right; font-weight: 800; color: #dc2626; padding: 4px 6px;" oninput="recalcularTotalesCarrito(); calcularCambioPOS();">
+      <span style="font-weight: 800; font-size: 13px; color: #dc2626;">%</span>
+    </div>
+  </div>
+
+  <div style="margin-bottom: 12px; display: none;">
+    <input type="checkbox" id="pos-emitir-ncf-check" style="display:none;">
+    <select id="pos-ncf-select" style="display:none;"><option value="SIN NCF">SIN NCF</option></select>
+  </div>
+
+  <div class="summary-row"><span>SUBTOTAL BRUTO:</span><span id="pos-subtotal">RD$ 0.00</span></div>
+  <div class="summary-row" id="pos-row-descuento" style="display: none; color: #dc2626; font-weight: 700;"><span>DESCUENTO APLICADO (<span id="pos-descuento-pct-label">0</span>%):</span><span id="pos-descuento-monto">-RD$ 0.00</span></div>
+  <div class="summary-row" style="display:none;"><span>ITBIS:</span><span id="pos-itbis">RD$ 0.00</span></div>
+  <div class="summary-row summary-total"><span>TOTAL A PAGAR:</span><span id="pos-total">RD$ 0.00</span></div>
+
+ <!-- CALCULADORA DE CAMBIO -->
+ <div style="margin-top: 14px; background: #f1edf6; padding: 12px; border-radius: 6px; border: 1px solid var(--border-color);">
+ <label style="font-size: 11px; font-weight: 800; color: #51475f;">PAGA CON (EFECTIVO ENTREGADO):</label>
+ <input type="number" id="pos-monto-entregado" class="input-control" placeholder="0.00" style="margin-top: 4px; font-size: 16px; font-weight: 800; color: var(--color-primary);" oninput="calcularCambioPOS()">
+ <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+ <span style="font-size: 12px; font-weight: 700; color: #51475f;">CAMBIO / DEVOLUCIÓN:</span>
+ <span id="pos-cambio-devuelto" style="font-size: 18px; font-weight: 900; color: var(--color-success);">RD$ 0.00</span>
+ </div>
+ </div>
+
+ <button class="btn btn-primary" style="width: 100%; margin-top: 16px; padding: 14px; font-size: 16px;" onclick="procesarVentaPOS()">
+ REGISTRAR TRANSACCIÓN & STOCK (F9)
+ </button>
+ </div>
+ </div>
+ </div>
+ </section>
+
+  <!-- VISTA DE HISTORIAL DE VENTAS -->
+  <section id="view-sales" class="view-panel">
+    <!-- TARJETAS KPI RESUMEN DE VENTAS Y GANANCIAS EN PERÍODO -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; margin-bottom: 20px;">
+      <div class="kpi-card" style="background: #ffffff; border-left: 4px solid var(--color-primary); padding: 14px 18px;">
+        <div style="font-size: 11px; font-weight: 700; color: var(--color-text-muted);">TOTAL VENDIDO (PERÍODO)</div>
+        <div style="font-size: 22px; font-weight: 900; color: var(--color-primary); margin-top: 4px;" id="kpi-ventas-total-monto">RD$ 0.00</div>
+      </div>
+      <div class="kpi-card" style="background: #ffffff; border-left: 4px solid #ef4444; padding: 14px 18px;">
+        <div style="font-size: 11px; font-weight: 700; color: var(--color-text-muted);">COSTO TOTAL MERCANCÍA</div>
+        <div style="font-size: 22px; font-weight: 900; color: #dc2626; margin-top: 4px;" id="kpi-ventas-costo-monto">RD$ 0.00</div>
+      </div>
+      <div class="kpi-card" style="background: #ffffff; border-left: 4px solid #10b981; padding: 14px 18px;">
+        <div style="font-size: 11px; font-weight: 700; color: var(--color-text-muted);">GANANCIA ESTIMADA PERÍODO</div>
+        <div style="font-size: 22px; font-weight: 900; color: #16a34a; margin-top: 4px;" id="kpi-ventas-ganancia-monto">RD$ 0.00</div>
+      </div>
+      <div class="kpi-card" style="background: #ffffff; border-left: 4px solid #7b2cbf; padding: 14px 18px;">
+        <div style="font-size: 11px; font-weight: 700; color: var(--color-text-muted);">CANTIDAD DE VENTAS</div>
+        <div style="font-size: 22px; font-weight: 900; color: #7b2cbf; margin-top: 4px;" id="kpi-ventas-cantidad">0</div>
+      </div>
+    </div>
+
+    <!-- FILTROS DE PERÍODO Y BUSCADOR AVANZADO -->
+    <div style="background: #fff; padding: 16px; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 20px;">
+      <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center;">
+          <span style="font-size: 11px; font-weight: 800; color: #51475f; text-transform: uppercase; margin-right: 4px;">Filtro de Período:</span>
+          <button class="btn btn-secondary btn-vta-periodo" id="btn-vta-diario" onclick="setFiltroVentasPeriodo('diario')" style="font-size: 11px; padding: 4px 10px;">Hoy</button>
+          <button class="btn btn-secondary btn-vta-periodo" id="btn-vta-ayer" onclick="setFiltroVentasPeriodo('ayer')" style="font-size: 11px; padding: 4px 10px;">Ayer</button>
+          <button class="btn btn-secondary btn-vta-periodo" id="btn-vta-semanal" onclick="setFiltroVentasPeriodo('semanal')" style="font-size: 11px; padding: 4px 10px;">7 Días</button>
+          <button class="btn btn-secondary btn-vta-periodo" id="btn-vta-quincenal" onclick="setFiltroVentasPeriodo('quincenal')" style="font-size: 11px; padding: 4px 10px;">15 Días</button>
+          <button class="btn btn-secondary btn-vta-periodo active" id="btn-vta-mensual" onclick="setFiltroVentasPeriodo('mensual')" style="font-size: 11px; padding: 4px 10px;">Este Mes</button>
+          <button class="btn btn-secondary btn-vta-periodo" id="btn-vta-trimestral" onclick="setFiltroVentasPeriodo('trimestral')" style="font-size: 11px; padding: 4px 10px;">Trimestral</button>
+          <button class="btn btn-secondary btn-vta-periodo" id="btn-vta-semestral" onclick="setFiltroVentasPeriodo('semestral')" style="font-size: 11px; padding: 4px 10px;">Semestral</button>
+          <button class="btn btn-secondary btn-vta-periodo" id="btn-vta-anual" onclick="setFiltroVentasPeriodo('anual')" style="font-size: 11px; padding: 4px 10px;">Año Actual</button>
+          <button class="btn btn-secondary btn-vta-periodo" id="btn-vta-todos" onclick="setFiltroVentasPeriodo('todos')" style="font-size: 11px; padding: 4px 10px;">Ver Todas</button>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <button class="btn btn-success" onclick="exportarVentasExcel()" style="font-weight: 700; font-size: 12px;">📊 Exportar Excel (.csv)</button>
+          <button class="btn btn-primary" onclick="exportarVentasPDF()" style="font-weight: 700; font-size: 12px;">📄 Imprimir Reporte PDF</button>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center; border-top: 1px solid #f1edf6; padding-top: 12px;">
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <label style="font-size: 11px; font-weight: 700; color: #6b6578;">Desde:</label>
+          <input type="date" id="ventas-fecha-desde" class="input-control" style="font-size: 12px; font-weight: 600;" oninput="onVentasFechaManualChange()" onchange="onVentasFechaManualChange()">
+        </div>
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <label style="font-size: 11px; font-weight: 700; color: #6b6578;">Hasta:</label>
+          <input type="date" id="ventas-fecha-hasta" class="input-control" style="font-size: 12px; font-weight: 600;" oninput="onVentasFechaManualChange()" onchange="onVentasFechaManualChange()">
+          <button type="button" class="btn btn-secondary" onclick="limpiarFiltroFechasVentas()" title="Limpiar fechas y ver todas" style="padding: 4px 8px; font-size: 11px; font-weight: 700; cursor: pointer;">✕ Limpiar</button>
+        </div>
+        <span id="ventas-periodo-indicador" style="display: none; font-size: 11px; font-weight: 700; color: #5a189a; background: #f4edfa; border: 1px solid #d9c4ee; padding: 4px 10px; border-radius: 4px;"></span>
+        <div style="display: flex; align-items: center; gap: 6px;">
+          <label style="font-size: 11px; font-weight: 700; color: #6b6578;">Origen:</label>
+          <select id="ventas-almacen-select" class="input-control" style="font-size: 12px; font-weight: 600;" onchange="filtrarVentasHistorialView()">
+            <option value="">Todos los Orígenes</option>
+            <option value="1">Almacén Central</option>
+            <option value="camiones">Todos los vehículos / rutas</option>
+          </select>
+        </div>
+        <div style="flex: 1; min-width: 240px;">
+          <input type="text" id="ventas-search-input" class="input-control" style="font-weight: 700;" placeholder="Buscar por No. Venta (#11), Cliente..." oninput="filtrarVentasHistorialView()">
+        </div>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <div class="table-header-bar">
+        <h3>Historial General de Ventas & Ganancias</h3>
+        <button class="btn btn-primary" onclick="switchView('pos')">+ Nueva Venta en POS</button>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>ID Venta</th>
+            <th>Fecha y Hora</th>
+            <th>Cliente</th>
+            <th>Almacén / Camión</th>
+            <th>Tipo Pago</th>
+            <th>Costo Mercancía (DOP)</th>
+            <th>Total Venta (DOP)</th>
+            <th>Ganancia Estimada (DOP)</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="tbl-ventas-historial">
+          <tr><td colspan="9" style="text-align: center;">Cargando historial de ventas...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+ <!-- VISTA 3: CAMIONES Y RUTAS DE REPARTO -->
+ <section id="view-trucks" class="view-panel">
+ <div style="display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap;">
+ <button class="btn btn-success" onclick="abrirModalCrearVehiculo()"> + Crear / Agregar Nuevo Vehículo</button>
+ <button class="btn btn-primary" onclick="abrirModalCargarCamion()"> + Cargar / Despachar Vehículo</button>
+ <button class="btn btn-warning" onclick="abrirModalMermaCamion()"> Registrar Merma / Mercancía Rota en Ruta</button>
+ </div>
+
+ <!-- CONTENEDOR DINÁMICO DE TARJETAS DE VEHÍCULOS DE LA FLOTA -->
+ <div id="vehiculos-cards-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 24px; margin-bottom: 24px;">
+ <!-- Dinámico via JS -->
+ </div>
+
+ <!-- HISTORIAL DE LIQUIDACIONES Y CUADRES DE RUTA -->
+ <div class="table-container">
+ <div class="table-header-bar">
+ <h3>Historial de Liquidaciones & Cuadres Diarios de Choferes</h3>
+ </div>
+ <table class="data-table">
+ <thead>
+ <tr>
+ <th># Cuadre</th>
+ <th>Fecha</th>
+ <th>Camión / Ruta</th>
+ <th>Chofer</th>
+ <th>Efectivo</th>
+ <th>Transferencias</th>
+ <th>Crédito</th>
+ <th>Efectivo Entregado</th>
+ <th>Diferencia Caja</th>
+ <th>Estado</th>
+ </tr>
+ </thead>
+ <tbody id="tbl-historial-cuadres-rutas">
+ <tr><td colspan="10" style="text-align:center;">Cargando historial de liquidaciones...</td></tr>
+ </tbody>
+ </table>
+ </div>
+ </section>
+
+  <!-- VISTA 4: INVENTARIO CENTRAL & REPORTES DE VALORACIÓN -->
+  <section id="view-inventory" class="view-panel">
+    <!-- TARJETAS KPI DE VALORACIÓN FINANCIERA DE INVENTARIO -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 20px;">
+      <div class="kpi-card" style="background: #ffffff; border-left: 4px solid var(--color-primary); padding: 14px 18px;">
+        <div style="font-size: 11px; font-weight: 700; color: var(--color-text-muted);">PRODUCTOS REGISTRADOS</div>
+        <div style="font-size: 22px; font-weight: 900; color: var(--color-primary); margin-top: 4px;" id="kpi-inv-total-prods">0</div>
+      </div>
+      <div class="kpi-card" style="background: #ffffff; border-left: 4px solid #10b981; padding: 14px 18px;">
+        <div style="font-size: 11px; font-weight: 700; color: var(--color-text-muted);">VALOR TOTAL A PRECIO DE COSTO</div>
+        <div style="font-size: 22px; font-weight: 900; color: #10b981; margin-top: 4px;" id="kpi-inv-valor-costo">RD$ 0.00</div>
+      </div>
+      <div class="kpi-card" style="background: #ffffff; border-left: 4px solid #7b2cbf; padding: 14px 18px;">
+        <div style="font-size: 11px; font-weight: 700; color: var(--color-text-muted);">VALOR ESTIMADO A PRECIO DE VENTA</div>
+        <div style="font-size: 22px; font-weight: 900; color: #7b2cbf; margin-top: 4px;" id="kpi-inv-valor-venta">RD$ 0.00</div>
+      </div>
+      <div class="kpi-card" style="background: #ffffff; border-left: 4px solid #f59e0b; padding: 14px 18px;">
+        <div style="font-size: 11px; font-weight: 700; color: var(--color-text-muted);">MARGEN BRUTO POTENCIAL ESTIMADO</div>
+        <div style="font-size: 22px; font-weight: 900; color: #f59e0b; margin-top: 4px;" id="kpi-inv-margen-estimado">RD$ 0.00 (0%)</div>
+      </div>
+    </div>
+
+    <!-- FILTROS POR PERÍODO Y ALMACÉN -->
+    <div class="table-container" style="padding: 16px; margin-bottom: 20px; background: #faf8fc;">
+      <div style="margin-bottom: 14px;">
+        <label style="font-size: 11px; font-weight: 800; color: #51475f; display: block; margin-bottom: 6px; text-transform: uppercase;">
+          Filtro Rápido de Período para Reporte de Inventario:
+        </label>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <button class="btn btn-secondary btn-inv-periodo active" id="btn-inv-diario" onclick="setFiltroInventarioPeriodo('diario')" style="padding: 6px 12px; font-size: 12px;">Diario (Hoy)</button>
+          <button class="btn btn-secondary btn-inv-periodo" id="btn-inv-semanal" onclick="setFiltroInventarioPeriodo('semanal')" style="padding: 6px 12px; font-size: 12px;">Semanal</button>
+          <button class="btn btn-secondary btn-inv-periodo" id="btn-inv-quincenal" onclick="setFiltroInventarioPeriodo('quincenal')" style="padding: 6px 12px; font-size: 12px;">Quincenal</button>
+          <button class="btn btn-secondary btn-inv-periodo" id="btn-inv-mensual" onclick="setFiltroInventarioPeriodo('mensual')" style="padding: 6px 12px; font-size: 12px;">Mensual</button>
+          <button class="btn btn-secondary btn-inv-periodo" id="btn-inv-trimestral" onclick="setFiltroInventarioPeriodo('trimestral')" style="padding: 6px 12px; font-size: 12px;">Trimestral</button>
+          <button class="btn btn-secondary btn-inv-periodo" id="btn-inv-semestral" onclick="setFiltroInventarioPeriodo('semestral')" style="padding: 6px 12px; font-size: 12px;">Semestral</button>
+          <button class="btn btn-secondary btn-inv-periodo" id="btn-inv-anual" onclick="setFiltroInventarioPeriodo('anual')" style="padding: 6px 12px; font-size: 12px;">Anual</button>
+          <button class="btn btn-secondary btn-inv-periodo" id="btn-inv-custom" onclick="setFiltroInventarioPeriodo('custom')" style="padding: 6px 12px; font-size: 12px;">Desde - Hasta</button>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;">
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end;">
+          <div>
+            <label style="font-size: 11px; font-weight: 700;">Fecha Desde:</label>
+            <input type="date" id="inv-fecha-desde" class="input-control" style="margin-top: 4px;">
+          </div>
+          <div>
+            <label style="font-size: 11px; font-weight: 700;">Fecha Hasta:</label>
+            <input type="date" id="inv-fecha-hasta" class="input-control" style="margin-top: 4px;">
+          </div>
+          <div>
+            <label style="font-size: 11px; font-weight: 700;">Almacén / Camión:</label>
+            <select id="inv-almacen-select" class="input-control" style="margin-top: 4px;">
+              <option value="">Todos los Almacenes & Vehículos</option>
+              <option value="1">Almacén Principal Central (POS)</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" onclick="renderInventarioCompleto()" style="padding: 9px 16px;">
+            Generar Reporte
+          </button>
+        </div>
+
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <button class="btn btn-success" onclick="exportarInventarioExcel()" style="padding: 9px 14px; font-size: 12px; font-weight: 700;">
+            Exportar a Excel
+          </button>
+          <button class="btn btn-secondary" onclick="exportarInventarioPDF()" style="padding: 9px 14px; font-size: 12px; font-weight: 700; background: #51475f; color: #fff;">
+            Exportar a PDF
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABLA DE INVENTARIO Y CATÁLOGO -->
+    <div class="table-container">
+      <div class="table-header-bar">
+        <h3>Catálogo de Productos e Inventarios Multi-Almacén</h3>
+        <div style="display: flex; gap: 10px;">
+          <button class="btn btn-primary" onclick="abrirModalProducto()">+ Registrar Producto</button>
+          <button class="btn btn-success" onclick="abrirModalEntradaCompra()">+ Entrada de Mercancía / Compra</button>
+        </div>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr id="tbl-inventario-head">
+            <th>Código</th>
+            <th>Nombre Producto</th>
+            <th>Categoría</th>
+            <th>Precio Compra</th>
+            <th>Precio Mayorista</th>
+            <th>Precio Detalle</th>
+            <th>Almacén Central</th>
+            <th>Vehículos</th>
+            <th>Stock Total</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="tbl-inventario-completo">
+          <tr><td colspan="11" style="text-align: center;">Cargando inventarios...</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+    <!-- VISTA DE REPORTES FISCALES & CONTABILIDAD -->
+    <section id="view-reports" class="view-panel">
+      <!-- BARRA DE FILTROS POR PERÍODO Y ALMACÉN -->
+      <div class="table-container" style="padding: 16px; margin-bottom: 20px; background: #faf8fc;">
+        <!-- BOTONES RÁPIDOS DE PERÍODO DE CUADRES/REPORTES -->
+        <div style="margin-bottom: 14px;">
+          <label style="font-size: 11px; font-weight: 800; color: #51475f; display: block; margin-bottom: 6px; text-transform: uppercase;">
+            Selección Rápida de Período de Cuadre:
+          </label>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="btn btn-secondary btn-periodo active" id="btn-periodo-diario" onclick="setFiltroPeriodo('diario')" style="padding: 6px 12px; font-size: 12px;">Diario (Hoy)</button>
+            <button class="btn btn-secondary btn-periodo" id="btn-periodo-semanal" onclick="setFiltroPeriodo('semanal')" style="padding: 6px 12px; font-size: 12px;">Semanal</button>
+            <button class="btn btn-secondary btn-periodo" id="btn-periodo-mensual" onclick="setFiltroPeriodo('mensual')" style="padding: 6px 12px; font-size: 12px;">Mensual</button>
+            <button class="btn btn-secondary btn-periodo" id="btn-periodo-trimestral" onclick="setFiltroPeriodo('trimestral')" style="padding: 6px 12px; font-size: 12px;">Trimestral (3 Meses)</button>
+            <button class="btn btn-secondary btn-periodo" id="btn-periodo-semestral" onclick="setFiltroPeriodo('semestral')" style="padding: 6px 12px; font-size: 12px;">Semestral (6 Meses)</button>
+            <button class="btn btn-secondary btn-periodo" id="btn-periodo-anual" onclick="setFiltroPeriodo('anual')" style="padding: 6px 12px; font-size: 12px;">Anual (Año Actual)</button>
+            <button class="btn btn-secondary btn-periodo" id="btn-periodo-custom" onclick="setFiltroPeriodo('custom')" style="padding: 6px 12px; font-size: 12px;">Desde - Hasta</button>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;">
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end;">
+            <div>
+              <label style="font-size: 11px; font-weight: 700;">Fecha Desde:</label>
+              <input type="date" id="reporte-fecha-desde" class="input-control" style="margin-top: 4px;">
+            </div>
+            <div>
+              <label style="font-size: 11px; font-weight: 700;">Fecha Hasta:</label>
+              <input type="date" id="reporte-fecha-hasta" class="input-control" style="margin-top: 4px;">
+            </div>
+            <div>
+              <label style="font-size: 11px; font-weight: 700;">Almacén / Camión:</label>
+              <select id="reporte-almacen-select" class="input-control" style="margin-top: 4px;">
+                <option value="">Todos los Almacenes & Vehículos</option>
+                <option value="1">Almacén Principal Central (POS)</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" onclick="renderReportesContabilidad()" style="padding: 9px 16px;">
+              Filtrar Reportes
+            </button>
+          </div>
+
+          <!-- BOTONES DE EXPORTACIÓN PDF Y EXCEL -->
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button class="btn btn-success" onclick="exportarCuadresExcel()" style="padding: 9px 14px; font-size: 12px; font-weight: 700;">
+              Exportar a Excel
+            </button>
+            <button class="btn btn-secondary" onclick="exportarCuadresPDF()" style="padding: 9px 14px; font-size: 12px; font-weight: 700; background: #51475f; color: #fff;">
+              Exportar a PDF
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- REPORTE CONSOLIDADO DE CUADRES OPERATIVOS -->
+      <div class="table-container" style="padding: 20px; margin-bottom: 24px; border-left: 4px solid #7b2cbf;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
+          <div>
+            <h3 style="margin: 0; color: #7b2cbf;">Reporte Consolidado de Cuadres Operativos (Caja POS & Rutas)</h3>
+            <p style="margin: 4px 0 0 0; font-size: 12px; color: var(--color-text-muted);" id="lbl-periodo-cuadres-rango">
+              Resumen de cierres de caja POS y liquidaciones de camiones para el período seleccionado.
+            </p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 16px;">
+          <div style="background: #ffffff; padding: 12px; border-radius: 6px; border: 1px solid var(--border-color);">
+            <div style="font-size: 11px; font-weight:700; color: #6b6578;">TOTAL CUADRES</div>
+            <div style="font-size: 18px; font-weight: 800; color: var(--color-text-main); margin-top: 4px;" id="rep-cuadres-total-count">0</div>
+          </div>
+          <div style="background: #ffffff; padding: 12px; border-radius: 6px; border: 1px solid var(--border-color);">
+            <div style="font-size: 11px; font-weight:700; color: #166534;">VENTAS EFECTIVO</div>
+            <div style="font-size: 16px; font-weight: 800; color: #15803d; margin-top: 4px;" id="rep-cuadres-total-efectivo">RD$ 0.00</div>
+          </div>
+          <div style="background: #ffffff; padding: 12px; border-radius: 6px; border: 1px solid var(--border-color);">
+            <div style="font-size: 11px; font-weight:700; color: #5a189a;">TRANSFERENCIAS / CHEQUES</div>
+            <div style="font-size: 16px; font-weight: 800; color: #5a189a; margin-top: 4px;" id="rep-cuadres-total-transferencia">RD$ 0.00</div>
+          </div>
+          <div style="background: #ffffff; padding: 12px; border-radius: 6px; border: 1px solid var(--border-color);">
+            <div style="font-size: 11px; font-weight:700; color: #d97706;">VENTAS CRÉDITO</div>
+            <div style="font-size: 16px; font-weight: 800; color: #d97706; margin-top: 4px;" id="rep-cuadres-total-credito">RD$ 0.00</div>
+          </div>
+          <div style="background: #ffffff; padding: 12px; border-radius: 6px; border: 1px solid var(--border-color);">
+            <div style="font-size: 11px; font-weight:700; color: #7b2cbf;">EFECTIVO ENTREGADO</div>
+            <div style="font-size: 16px; font-weight: 800; color: #7b2cbf; margin-top: 4px;" id="rep-cuadres-total-entregado">RD$ 0.00</div>
+          </div>
+          <div style="background: #faf8fc; padding: 12px; border-radius: 6px; border: 1px solid var(--border-color);" id="box-rep-cuadres-diferencia">
+            <div style="font-size: 11px; font-weight:700; color: #51475f;">DIFERENCIA CAJA (TOTAL)</div>
+            <div style="font-size: 16px; font-weight: 800; margin-top: 4px;" id="rep-cuadres-total-diferencia">RD$ 0.00</div>
+          </div>
+        </div>
+
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Tipo Cuadre</th>
+              <th>Fecha</th>
+              <th>Origen / Almacén</th>
+              <th>Responsable</th>
+              <th>Ventas Efectivo</th>
+              <th>Transferencias</th>
+              <th>Ventas Crédito</th>
+              <th>Efectivo Esperado</th>
+              <th>Efectivo Entregado</th>
+              <th>Diferencia</th>
+              <th>Estado / Notas</th>
+            </tr>
+          </thead>
+          <tbody id="tbl-reporte-cuadres">
+            <tr><td colspan="12" style="text-align: center;">Selecciona un filtro para cargar el reporte de cuadres...</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ESTADO DE RESULTADOS: capital, ganancias y gastos por separado -->
+      <div id="resumen-financiero-reportes" style="margin-bottom: 24px;"></div>
+
+ <!-- TOP PRODUCTOS Y RANKING DE CLIENTES -->
+ <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px;">
+ <!-- TOP PRODUCTOS ESTRELLA -->
+ <div class="table-container">
+ <div class="table-header-bar">
+ <h3> Top 10 Productos Más Vendidos y Mayor Margen</h3>
+ </div>
+ <table class="data-table">
+ <thead>
+ <tr>
+ <th>Producto</th>
+ <th>Unidades Vendidas</th>
+ <th>Ventas Totales</th>
+ <th>Ganancia Estimada</th>
+ </tr>
+ </thead>
+ <tbody id="tbl-top-productos">
+ <tr><td colspan="4" style="text-align:center;">Cargando productos estrella...</td></tr>
+ </tbody>
+ </table>
+ </div>
+
+ <!-- RANKING CLIENTES TOP -->
+ <div class="table-container">
+ <div class="table-header-bar">
+ <h3> Ranking Top 10 Clientes por Consumo</h3>
+ </div>
+ <table class="data-table">
+ <thead>
+ <tr>
+ <th>Cliente</th>
+ <th>RNC / Cédula</th>
+ <th>Total Compras</th>
+ <th>Monto Total (DOP)</th>
+ </tr>
+ </thead>
+ <tbody id="tbl-ranking-clientes">
+ <tr><td colspan="4" style="text-align:center;">Cargando ranking de clientes...</td></tr>
+ </tbody>
+ </table>
+ </div>
+ </div>
+ </section>
+
+      <!-- VISTA DE PROVEEDORES Y SUPLIDORES -->
+      <section id="view-suppliers" class="view-panel">
+        <!-- BARRA DE ACCIÓN Y BÚSQUEDA -->
+        <div class="table-container" style="padding: 16px; margin-bottom: 20px; background: #fff; border-left: 4px solid var(--color-primary);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h3 style="margin: 0; font-size: 16px; color: var(--color-primary);">Gestión de Proveedores & Suplidores</h3>
+              <p style="margin: 4px 0 0 0; font-size: 12px; color: var(--color-text-muted);">Control de suplidores de mercancía, compras realizadas e historial de mercancía ingresada</p>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <input type="text" id="suppliers-search-input" class="input-control" style="width: 280px;" placeholder="Buscar por Nombre, RNC o Teléfono..." oninput="filtrarTablaProveedoresView()">
+              <button class="btn btn-primary" onclick="abrirModalProveedor()">+ Registrar Nuevo Suplidor</button>
+              <button class="btn btn-success" onclick="abrirModalEntradaCompra()">+ Nueva Compra / Entrada</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- TARJETAS METRICAS KPI SUPLIDORES -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px;">
+          <div style="background: #ffffff; padding: 16px; border-radius: 8px; border: 1px solid var(--border-color);">
+            <div style="font-size: 12px; font-weight:700; color: #6b6578;">SUPLIDORES REGISTRADOS</div>
+            <div style="font-size: 22px; font-weight: 800; color: var(--color-text-main); margin-top: 4px;" id="kpi-suplidores-total">0</div>
+          </div>
+          <div style="background: #ffffff; padding: 16px; border-radius: 8px; border: 1px solid var(--border-color);">
+            <div style="font-size: 12px; font-weight:700; color: #166534;">TOTAL INVERTIDO EN COMPRAS</div>
+            <div style="font-size: 20px; font-weight: 800; color: #15803d; margin-top: 4px;" id="kpi-suplidores-compras-monto">RD$ 0.00</div>
+          </div>
+          <div style="background: #ffffff; padding: 16px; border-radius: 8px; border: 1px solid var(--border-color);">
+            <div style="font-size: 12px; font-weight:700; color: #7b2cbf;">SUPLIDOR PRINCIPAL</div>
+            <div style="font-size: 16px; font-weight: 800; color: #7b2cbf; margin-top: 4px;" id="kpi-suplidores-principal">Ninguno</div>
+          </div>
+        </div>
+
+        <!-- TABLA CARTERA DE PROVEEDORES -->
+        <div class="table-container">
+          <div class="table-header-bar">
+            <h3>Catálogo Oficial de Suplidores de Mercancía</h3>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>RNC / Cédula / ID</th>
+                <th>Nombre / Razón Social</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>Dirección</th>
+                <th>Compras Realizadas</th>
+                <th>Monto Total Invertido</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tbl-proveedores">
+              <tr><td colspan="9" style="text-align:center;">Cargando catálogo de suplidores...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- VISTA DE NÓMINAS, EMPLEADOS Y ADELANTOS -->
+      <section id="view-payroll" class="view-panel">
+        <!-- BANNER KPI DE NÓMINA -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 20px;">
+          <div class="kpi-card" style="background: #ffffff; border-left: 4px solid var(--color-primary); padding: 14px 18px;">
+            <div style="font-size: 11px; font-weight: 700; color: var(--color-text-muted);">EMPLEADOS ACTIVOS</div>
+            <div style="font-size: 22px; font-weight: 900; color: var(--color-primary); margin-top: 4px;" id="kpi-nomina-empleados-count">0</div>
+          </div>
+          <div class="kpi-card" style="background: #ffffff; border-left: 4px solid #10b981; padding: 14px 18px;">
+            <div style="font-size: 11px; font-weight: 700; color: var(--color-text-muted);">NÓMINA ESTIMADA MES</div>
+            <div style="font-size: 22px; font-weight: 900; color: #10b981; margin-top: 4px;" id="kpi-nomina-monto-estimado">RD$ 0.00</div>
+          </div>
+          <div class="kpi-card" style="background: #ffffff; border-left: 4px solid #f59e0b; padding: 14px 18px;">
+            <div style="font-size: 11px; font-weight: 700; color: var(--color-text-muted);">ADELANTOS PENDIENTES</div>
+            <div style="font-size: 22px; font-weight: 900; color: #f59e0b; margin-top: 4px;" id="kpi-nomina-adelantos-pendientes">RD$ 0.00</div>
+          </div>
+          <div class="kpi-card" style="background: #ffffff; border-left: 4px solid #7b2cbf; padding: 14px 18px;">
+            <div style="font-size: 11px; font-weight: 700; color: var(--color-text-muted);">NÓMINAS PAGADAS HASTA HOY</div>
+            <div style="font-size: 22px; font-weight: 900; color: #7b2cbf; margin-top: 4px;" id="kpi-nomina-pagada-mes">RD$ 0.00</div>
+          </div>
+        </div>
+
+        <!-- BOTONES DE ACCIÓN RÁPIDA -->
+        <div style="display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap;">
+          <button class="btn btn-primary" onclick="abrirModalEmpleado()">+ Registrar Nuevo Empleado</button>
+          <button class="btn btn-warning" onclick="abrirModalAdelantoEmpleado()">+ Registrar Adelanto de Sueldo</button>
+          <button class="btn btn-success" onclick="cambiarPestanaNomina('procesar')">Procesar Pago de Nómina</button>
+        </div>
+
+        <!-- PESTAÑAS INTERNAS -->
+        <div style="display: flex; border-bottom: 2px solid var(--border-color); margin-bottom: 20px; gap: 6px;">
+          <button class="btn btn-secondary btn-pestana-nomina active" id="tab-btn-empleados" onclick="cambiarPestanaNomina('empleados')">Directorio de Empleados</button>
+          <button class="btn btn-secondary btn-pestana-nomina" id="tab-btn-procesar" onclick="cambiarPestanaNomina('procesar')">Procesar Nómina por Frecuencia</button>
+          <button class="btn btn-secondary btn-pestana-nomina" id="tab-btn-adelantos" onclick="cambiarPestanaNomina('adelantos')">Historial de Adelantos</button>
+          <button class="btn btn-secondary btn-pestana-nomina" id="tab-btn-historial" onclick="cambiarPestanaNomina('historial')">Historial de Pagos de Nómina</button>
+        </div>
+
+        <!-- CONTENIDO PESTAÑA 1: EMPLEADOS -->
+        <div id="tab-content-empleados" class="tab-content-nomina active">
+          <div class="table-container">
+            <div class="table-header-bar">
+              <h3>Directorio General de Empleados</h3>
+              <input type="text" id="empleados-search-input" class="input-control" style="width: 320px; font-weight: 700;" placeholder="Buscar por Nombre, Puesto o Cédula..." oninput="filtrarTablaEmpleadosView()">
+            </div>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Cédula</th>
+                  <th>Nombre Completo</th>
+                  <th>Puesto / Cargo</th>
+                  <th>Teléfono</th>
+                  <th>Sueldo Base (DOP)</th>
+                  <th>Frecuencia Pago</th>
+                  <th>Adelantos Pendientes</th>
+                  <th style="text-align: center;">Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="tbl-empleados">
+                <tr><td colspan="9" style="text-align:center;">Cargando lista de empleados...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- CONTENIDO PESTAÑA 2: PROCESAR NÓMINA -->
+        <div id="tab-content-procesar" class="tab-content-nomina" style="display: none;">
+          <div class="table-container" style="padding: 16px; margin-bottom: 20px; background: #faf8fc;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+              <div>
+                <label style="font-size: 12px; font-weight: 700;">Seleccionar Frecuencia de Pago:</label>
+                <select id="nomina-frecuencia-select" class="input-control" style="width: 220px; margin-left: 10px; display: inline-block;" onchange="cargarPreparacionNominaView()">
+                  <option value="Quincenal" selected>Quincenal</option>
+                  <option value="Semanal">Semanal</option>
+                  <option value="Diario">Diario</option>
+                  <option value="Mensual">Mensual</option>
+                  <option value="Todas">Todas las Frecuencias</option>
+                </select>
+              </div>
+              <div>
+                <label style="font-size: 12px; font-weight: 700;">Nombre del Período / Cierre:</label>
+                <input type="text" id="nomina-periodo-cierre" class="input-control" style="width: 260px; margin-left: 10px; display: inline-block;" placeholder="Ej. 1ra Quincena Septiembre 2026">
+              </div>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <div class="table-header-bar">
+              <h3>Pre-Nómina del Período (Cálculo de Pagos Neto & Descuento de Adelantos)</h3>
+            </div>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Empleado</th>
+                  <th>Puesto</th>
+                  <th>Frecuencia</th>
+                  <th>Sueldo Base</th>
+                  <th>Sueldo Período (Bruto)</th>
+                  <th>Adelantos a Descontar</th>
+                  <th>Neto a Entregar (DOP)</th>
+                  <th style="text-align: center;">Acción</th>
+                </tr>
+              </thead>
+              <tbody id="tbl-prenomina-items">
+                <tr><td colspan="8" style="text-align:center;">Selecciona una frecuencia para preparar la nómina.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- CONTENIDO PESTAÑA 3: ADELANTOS -->
+        <div id="tab-content-adelantos" class="tab-content-nomina" style="display: none;">
+          <div class="table-container">
+            <div class="table-header-bar">
+              <h3>Registro de Adelantos de Sueldo y Avances a Empleados</h3>
+            </div>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th># Adelanto</th>
+                  <th>Fecha</th>
+                  <th>Empleado</th>
+                  <th>Puesto</th>
+                  <th>Concepto</th>
+                  <th>Monto Adelantado (DOP)</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody id="tbl-adelantos">
+                <tr><td colspan="7" style="text-align:center;">Cargando adelantos de sueldo...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- CONTENIDO PESTAÑA 4: HISTORIAL DE PAGOS -->
+        <div id="tab-content-historial" class="tab-content-nomina" style="display: none;">
+          <div class="table-container">
+            <div class="table-header-bar">
+              <h3>Historial de Pagos de Nómina Procesados</h3>
+            </div>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th># Pago</th>
+                  <th>Fecha de Pago</th>
+                  <th>Empleado</th>
+                  <th>Frecuencia</th>
+                  <th>Período</th>
+                  <th>Sueldo Bruto</th>
+                  <th>Adelantos Descontados</th>
+                  <th>Neto Pagado (DOP)</th>
+                  <th>Ref. Gasto</th>
+                </tr>
+              </thead>
+              <tbody id="tbl-historial-nominas">
+                <tr><td colspan="9" style="text-align:center;">Cargando historial de pagos de nómina...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- VISTA 6: CLIENTES Y CUENTAS POR COBRAR (CXC) -->
+      <section id="view-customers" class="view-panel">
+ <div style="display: flex; gap: 12px; margin-bottom: 20px;">
+ <button class="btn btn-primary" onclick="abrirModalCliente()">+ Crear Nuevo Cliente</button>
+ <button class="btn btn-success" onclick="abrirModalCobroCXC()"> Registrar Cobro / Abono a Crédito</button>
+ </div>
+
+ <!-- TABLA DE CUENTAS POR COBRAR PENDIENTES (CXC) -->
+ <div class="table-container" style="margin-bottom: 24px;">
+ <div class="table-header-bar">
+ <h3>Facturas a Crédito Pendientes (Cuentas por Cobrar CXC)</h3>
+ <input type="text" id="cxc-search-input" class="input-control" style="width: 340px; font-weight: 700;" placeholder="Buscar CXC por Cliente, RNC o Factura #..." oninput="filtrarTablaCXCView()">
+ </div>
+ <table class="data-table">
+ <thead>
+ <tr>
+ <th>Factura #</th>
+ <th>Cliente</th>
+ <th>NCF Fiscal</th>
+ <th>Fecha Venta</th>
+ <th>Vencimiento</th>
+ <th>Monto Original</th>
+ <th>Cobrado</th>
+ <th>Balance Pendiente</th>
+ <th>Estado</th>
+ <th>Acción</th>
+ </tr>
+ </thead>
+ <tbody id="tbl-cxc-pendientes">
+ <tr><td colspan="10" style="text-align:center;">Cargando cuentas por cobrar...</td></tr>
+ </tbody>
+ </table>
+ </div>
+
+ <!-- TABLA DE CARTERA GENERAL DE CLIENTES -->
+ <div class="table-container">
+ <div class="table-header-bar">
+ <h3>Cartera General de Clientes</h3>
+ <input type="text" id="clientes-search-input" class="input-control" style="width: 360px; font-weight: 700;" placeholder="Buscar cliente por Nombre, RNC/Cédula, Teléfono o ID (#2)..." oninput="filtrarTablaClientesView()">
+ </div>
+ <table class="data-table">
+ <thead>
+ <tr>
+ <th>ID</th>
+ <th>RNC / Cédula</th>
+ <th>Nombre o Razón Social</th>
+ <th>Teléfono</th>
+ <th>Límite Crédito</th>
+ <th>Balance Pendiente Total</th>
+ <th>Acción</th>
+ </tr>
+ </thead>
+ <tbody id="tbl-clientes">
+ <tr><td colspan="7" style="text-align:center;">Cargando clientes...</td></tr>
+ </tbody>
+ </table>
+ </div>
+ </section>
+
+ <!-- VISTA 7: GASTOS Y DIVIDENDOS -->
+ <section id="view-finance" class="view-panel">
+ <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+ <!-- GASTOS OPERATIVOS -->
+ <div class="table-container">
+ <div class="table-header-bar">
+ <h3>Registro de Gastos Operativos</h3>
+ <button class="btn btn-primary" onclick="abrirModalGasto()">+ Registrar Gasto</button>
+ </div>
+ <table class="data-table">
+ <thead>
+ <tr>
+ <th>Fecha</th>
+ <th>Categoría</th>
+ <th>Concepto</th>
+ <th>Vehículo</th>
+ <th>Monto (DOP)</th>
+ <th>Acción</th>
+ </tr>
+ </thead>
+ <tbody id="tbl-gastos">
+ <tr><td colspan="6" style="text-align:center;">Cargando gastos...</td></tr>
+ </tbody>
+ </table>
+ </div>
+
+ <!-- DIVIDENDOS Y GANANCIA DISPONIBLE -->
+ <div>
+ <div style="margin-bottom: 20px;">
+ <div style="display:flex; justify-content:flex-end; margin-bottom:10px;">
+ <button class="btn btn-success" onclick="abrirModalDividendo()">Retirar Dividendo</button>
+ </div>
+ <div id="resumen-financiero-gastos"></div>
+ </div>
+
+  <!-- HISTORIAL DE RETIROS DE DIVIDENDOS -->
+ <div class="table-container">
+ <div class="table-header-bar">
+ <h3>Historial de Retiros del Propietario</h3>
+ </div>
+ <table class="data-table">
+ <thead>
+ <tr>
+ <th>Fecha</th>
+ <th>Concepto del Retiro</th>
+ <th>Monto Retirado (DOP)</th>
+ <th>Acción</th>
+ </tr>
+ </thead>
+ <tbody id="tbl-dividendos-historial">
+ <tr><td colspan="4" style="text-align:center;">Cargando historial de dividendos...</td></tr>
+ </tbody>
+ </table>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- VISTA 8: CONFIGURACIÓN Y PERFIL DE LA EMPRESA -->
+<section id="view-settings" class="view-panel">
+  <div class="table-container" style="max-width: 800px; padding: 24px; margin: 0 auto;">
+    <div class="table-header-bar" style="border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 20px;">
+      <div>
+        <h3 style="color: var(--color-primary); margin:0;">Perfil Fiscal & Configuración de la Empresa</h3>
+        <p style="font-size: 12px; color: var(--color-text-muted); margin-top: 4px;">Información oficial para comprobantes DGII, tickets de venta y facturas impresas.</p>
+      </div>
+    </div>
+
+    <form onsubmit="guardarConfiguracionEmpresaSubmit(event)">
+      <div style="margin-bottom: 16px;">
+        <label style="font-size: 12px; font-weight: 700;">Nombre Comercial / Razón Social de la Empresa:</label>
+        <input type="text" id="cfg-nombre" class="input-control" style="margin-top: 4px; font-weight: 700;" placeholder="Ej. DISTRIBUIDORA ROJAS PERALTA">
+      </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+                <div>
+                  <label style="font-size: 12px; font-weight: 700;">RNC / Cédula Fiscal (DGII):</label>
+                  <input type="text" id="cfg-rnc" class="input-control" style="margin-top: 4px;" placeholder="Ej. 1-01-82934-1">
+                </div>
+                <div>
+                  <label style="font-size: 12px; font-weight: 700;">Teléfono de Contacto:</label>
+                  <input type="text" id="cfg-telefono" class="input-control" style="margin-top: 4px;" placeholder="Ej. (809) 555-0199">
+                </div>
+              </div>
+
+              <div style="margin-bottom: 16px;">
+                <label style="font-size: 12px; font-weight: 700;">Correo Electrónico de la Empresa:</label>
+                <input type="email" id="cfg-email" class="input-control" style="margin-top: 4px;" placeholder="Ej. contacto@rojasperalta.com">
+              </div>
+
+              <div style="margin-bottom: 16px;">
+                <label style="font-size: 12px; font-weight: 700;">Capital inicial invertido (RD$):</label>
+                <input type="number" id="cfg-capital-inicial" class="input-control" style="margin-top: 4px;" min="0" step="0.01" placeholder="Ej. 10000.00">
+                <small style="display:block; color:var(--color-text-muted); margin-top:4px;">Se muestra aparte del resultado del negocio y nunca se cuenta como ganancia.</small>
+              </div>
+
+              <div style="margin-bottom: 16px;">
+                <label style="font-size: 12px; font-weight: 700;">Dirección Física (Local Principal):</label>
+                <input type="text" id="cfg-direccion" class="input-control" style="margin-top: 4px;" placeholder="Ej. Av. Principal #45, Santo Domingo, Rep. Dom.">
+              </div>
+
+              <div style="margin-bottom: 24px;">
+                <label style="font-size: 12px; font-weight: 700;">Mensaje / Pie de Página en Tickets y Facturas:</label>
+                <textarea id="cfg-mensaje" class="input-control" style="margin-top: 4px; height: 80px; resize: vertical;" placeholder="Ej. ¡Gracias por su compra en Distribuidora Rojas Peralta!"></textarea>
+              </div>
+
+              <div style="display: flex; justify-content: flex-end;">
+                <button type="submit" class="btn btn-primary" style="padding: 10px 24px; font-weight: 700;">
+                  Guardar Perfil de Empresa
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- ZONA DE PELIGRO: REINICIAR BASE DE DATOS A 0 -->
+          <div class="table-container" style="max-width: 800px; padding: 24px; margin: 30px auto 0 auto; border: 2px solid #ef4444; background: #fff5f5; border-radius: 8px;">
+            <div style="display: flex; align-items: flex-start; gap: 16px;">
+              <div style="font-size: 32px; line-height: 1;">⚠️</div>
+              <div style="flex: 1;">
+                <h3 style="color: #b91c1c; margin: 0 0 6px 0;">Zona de Peligro: Reiniciar Base de Datos a Cero</h3>
+                <p style="font-size: 13px; color: #7f1d1d; margin-bottom: 12px; line-height: 1.5;">
+                  Esta función borrará por completo todas las ventas registradas, historial de transacciones, cuentas por cobrar, pagos, mermas, gastos y pagos de nómina para comenzar el sistema limpio desde cero. Los productos del catálogo y secuencias NCF se restablecerán a su estado inicial.
+                </p>
+                <div style="background: #fee2e2; border-left: 4px solid #dc2626; padding: 10px 14px; border-radius: 4px; font-size: 12px; color: #991b1b; font-weight: 600; margin-bottom: 16px;">
+                  ¡ADVERTENCIA! Esta acción es irreversible. Se recomienda exportar sus reportes antes de proceder.
+                </div>
+                <button type="button" class="btn btn-danger" style="background: #dc2626; color: #fff; font-weight: 800; padding: 10px 20px; font-size: 13px;" onclick="abrirModalResetDatabase()">
+                  🗑️ Borrar Base de Datos Completa e Iniciar Desde 0
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+ </div>
+
+ <!-- MODAL 1: REGISTRAR GASTO -->
+ <div id="modal-gasto" class="modal-backdrop">
+ <div class="modal-card">
+ <div class="modal-header">
+ <h3 id="modal-gasto-titulo">Registrar Nuevo Gasto Operativo</h3>
+ <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+ </div>
+ <div class="modal-body">
+ <input type="hidden" id="gasto-id">
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Fecha:</label>
+ <input type="date" id="gasto-fecha" class="input-control" style="margin-top:4px;">
+ </div>
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Categoría del Gasto:</label>
+ <select id="gasto-categoria" class="input-control" style="margin-top:4px;">
+ <option value="Combustible de Vehículo">Combustible de Vehículo</option>
+ <option value="Mantenimiento Vehicular">Mantenimiento Vehicular</option>
+ <option value="Nómina de Empleados">Nómina de Empleados</option>
+ <option value="Alquiler / Renta Almacén">Alquiler / Renta Almacén</option>
+ <option value="Electricidad y Servicios">Electricidad y Servicios</option>
+ <option value="Imprevistos y Varios">Imprevistos y Varios</option>
+ </select>
+ </div>
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Vehículo relacionado (opcional):</label>
+ <select id="gasto-camion" class="input-control" style="margin-top:4px;"><option value="">Sin vehículo</option></select>
+ </div>
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Concepto / Descripción:</label>
+ <input type="text" id="gasto-concepto" class="input-control" placeholder="Ej. Combustible del vehículo">
+ </div>
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Monto en Pesos (RD$):</label>
+ <input type="number" id="gasto-monto" class="input-control" placeholder="0.00">
+ </div>
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">NCF del Proveedor (Opcional para Reporte 606):</label>
+ <input type="text" id="gasto-ncf" class="input-control" placeholder="Ej. B0100000452">
+ </div>
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">RNC del Proveedor (opcional):</label>
+ <input type="text" id="gasto-rnc" class="input-control" placeholder="Ej. 101829341">
+ </div>
+ </div>
+ <div class="modal-footer">
+ <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+ <button class="btn btn-primary" id="btn-guardar-gasto" onclick="guardarGasto()">Guardar Gasto</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- MODAL 2: RETIRAR DIVIDENDO -->
+ <div id="modal-dividendo" class="modal-backdrop">
+ <div class="modal-card">
+ <div class="modal-header">
+ <h3 id="modal-dividendo-titulo">Retirar Dividendo del Propietario</h3>
+ <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+ </div>
+ <div class="modal-body">
+ <input type="hidden" id="dividendo-id">
+ <div style="margin-bottom:14px;">
+ <label style="font-size:12px; font-weight:700;">Fecha del retiro:</label>
+ <input type="date" id="dividendo-fecha" class="input-control" style="margin-top:4px;">
+ </div>
+ <div style="background: hsl(150, 60%, 94%); padding: 12px; border-radius: 6px; margin-bottom: 16px;">
+ <span style="font-size:12px; font-weight:700; color: var(--color-success);">GANANCIA DISPONIBLE PARA RETIRO:</span>
+ <div style="font-size: 22px; font-weight:800; color: var(--color-success);" id="modal-dividendo-disponible">RD$ 0.00</div>
+ </div>
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Monto a Retirar (RD$):</label>
+ <input type="number" id="dividendo-monto" class="input-control" placeholder="0.00">
+ </div>
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Concepto / Detalle:</label>
+ <input type="text" id="dividendo-concepto" class="input-control" value="Retiro de utilidades del propietario">
+ </div>
+ </div>
+ <div class="modal-footer">
+ <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+ <button class="btn btn-success" id="btn-guardar-dividendo" onclick="confirmarDividendo()">Confirmar Retiro</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- MODAL 3: CARGAR CAMIÓN -->
+ <div id="modal-cargar-camion" class="modal-backdrop">
+ <div class="modal-card" style="max-width: 650px;">
+ <div class="modal-header">
+ <h3>Cargar / Despachar Camión de Reparto</h3>
+ <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+ </div>
+ <div class="modal-body">
+ <div style="margin-bottom: 16px;">
+ <label style="font-size:12px; font-weight:700;">Seleccionar Camión Destino:</label>
+ <select id="cargar-camion-select" class="input-control" style="margin-top:4px;">
+ <option value="">Cargando vehículos...</option>
+ </select>
+ </div>
+
+ <h4>Selecciona las cantidades a transferir desde Almacén Central:</h4>
+ <div class="table-container" style="max-height: 250px; overflow-y: auto; margin-top: 10px;">
+ <table class="data-table">
+ <thead><tr><th>Producto</th><th>Stock Central</th><th>Cantidad a Cargar</th></tr></thead>
+ <tbody id="tbl-cargar-camion-items"></tbody>
+ </table>
+ </div>
+ </div>
+ <div class="modal-footer">
+ <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+ <button class="btn btn-primary" onclick="guardarCargaCamion()">Despachar a Ruta</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- MODAL 4: LIQUIDACIÓN / CUADRE DE CAMIÓN -->
+ <div id="modal-cuadre-camion" class="modal-backdrop">
+ <div class="modal-card">
+ <div class="modal-header">
+ <h3 id="modal-cuadre-titulo">Cuadre y Liquidación de Ruta</h3>
+ <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+ </div>
+ <div class="modal-body">
+ <div id="cuadre-periodo-lbl" style="font-size:12px; color:var(--color-text-muted); margin-bottom:10px;"></div>
+ <div class="cuadre-metodos">
+ <div class="cuadre-metodo cuadre-metodo-efectivo">
+ <span>EFECTIVO (a entregar)</span>
+ <strong id="cuadre-ventas-contado">RD$ 0.00</strong>
+ </div>
+ <div class="cuadre-metodo">
+ <span>TRANSFERENCIAS</span>
+ <strong id="cuadre-ventas-transferencia">RD$ 0.00</strong>
+ </div>
+ <div class="cuadre-metodo">
+ <span>CHEQUES</span>
+ <strong id="cuadre-ventas-cheque">RD$ 0.00</strong>
+ </div>
+ <div class="cuadre-metodo cuadre-metodo-credito">
+ <span>CRÉDITO (por cobrar)</span>
+ <strong id="cuadre-ventas-credito">RD$ 0.00</strong>
+ </div>
+ </div>
+ <div style="display:flex; justify-content:space-between; font-size:12px; padding:8px 2px; color:var(--color-text-muted);">
+ <span id="cuadre-facturas-lbl">0 ventas pendientes</span>
+ <span>Total vendido: <strong id="cuadre-ventas-total" style="color:var(--color-text-main);">RD$ 0.00</strong></span>
+ </div>
+ <p style="font-size:11px; color:var(--color-text-muted); margin:0 0 12px 0;">Sólo el efectivo se le recibe al chofer. Las transferencias, cheques y el crédito se muestran para control.</p>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">EFECTIVO ENTREGADO POR EL CHOFER (RD$):</label>
+ <input type="number" id="cuadre-efectivo-entregado" class="input-control" placeholder="0.00" min="0" step="0.01" oninput="calcularDiferenciaCuadre()">
+ </div>
+
+ <div id="cuadre-diferencia-box" style="padding: 12px; border-radius: 6px; font-weight: 700; text-align: center; margin-bottom: 14px; background: #f1edf6;">
+ Efectivo esperado: RD$ 0.00
+ </div>
+ <div style="margin-bottom: 4px;">
+ <label style="font-size:12px; font-weight:700;">Notas (opcional):</label>
+ <input type="text" id="cuadre-notas" class="input-control" placeholder="Ej. Falta por devolver en la próxima ruta">
+ </div>
+ </div>
+ <div class="modal-footer">
+ <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+ <button id="btn-guardar-cuadre" class="btn btn-success" onclick="guardarCuadreRuta()">Cerrar y Firmar Cuadre</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- MODAL 5: CREAR CLIENTE -->
+ <div id="modal-cliente" class="modal-backdrop">
+ <div class="modal-card">
+ <div class="modal-header">
+ <h3>Registrar Nuevo Cliente</h3>
+ <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+ </div>
+ <div class="modal-body">
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Nombre o Razón Social:</label>
+ <input type="text" id="cliente-nombre" class="input-control" placeholder="Ej. Colmado El Progreso SRL">
+ </div>
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">RNC o Cédula (opcional):</label>
+ <input type="text" id="cliente-rnc" class="input-control" placeholder="Puedes dejarlo vacío">
+ </div>
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Tipo NCF por Defecto:</label>
+ <select id="cliente-ncf-defecto" class="input-control" style="margin-top:4px;">
+ <option value="B02">B02 - Consumidor Final</option>
+ <option value="B01">B01 - Crédito Fiscal (RNC)</option>
+ <option value="B14">B14 - Regímenes Especiales</option>
+ <option value="B15">B15 - Gubernamental</option>
+ </select>
+ </div>
+ <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+ <div>
+ <label style="font-size:12px; font-weight:700;">Teléfono:</label>
+ <input type="text" id="cliente-telefono" class="input-control" placeholder="809-555-0000">
+ </div>
+ <div>
+ <label style="font-size:12px; font-weight:700;">Límite de Crédito (RD$):</label>
+ <input type="number" id="cliente-limite" class="input-control" placeholder="0.00">
+ </div>
+ </div>
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Dirección Comercial:</label>
+ <input type="text" id="cliente-direccion" class="input-control" placeholder="Calle, Número, Sector, Ciudad">
+ </div>
+ </div>
+ <div class="modal-footer">
+ <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+ <button class="btn btn-primary" onclick="guardarCliente()">Guardar Cliente</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- MODAL 6: REGISTRAR / EDITAR MERCANCÍA -->
+ <div id="modal-producto" class="modal-backdrop">
+ <div class="modal-card" style="max-width: 650px;">
+ <div class="modal-header">
+ <h3 id="modal-producto-titulo">Registrar Nueva Mercancía / Producto</h3>
+ <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+ </div>
+ <div class="modal-body">
+ <input type="hidden" id="prod-id">
+ <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+ <div>
+ <label style="font-size:12px; font-weight:700;">Código Interno:</label>
+ <input type="text" id="prod-codigo-interno" class="input-control" placeholder="Ej. BEB-003, EMB-002">
+ </div>
+ <div>
+ <label style="font-size:12px; font-weight:700;">Código de Barras (Opcional):</label>
+ <input type="text" id="prod-codigo-barras" class="input-control" placeholder="74601928307">
+ </div>
+ </div>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Nombre del Producto / Mercancía:</label>
+ <input type="text" id="prod-nombre" class="input-control" placeholder="Ej. Jugo Ya 1 Litro (Caja 12 unid)">
+ </div>
+
+ <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+ <div>
+ <label style="font-size:12px; font-weight:700;">Categoría:</label>
+ <select id="prod-categoria-select" class="input-control" style="margin-top:4px;">
+ <option value="1">Bebidas y Refrescos</option>
+ <option value="2">Embutidos y Lácteos</option>
+ <option value="3">Enlatados y Conservas</option>
+ <option value="4">Granos y Cereales</option>
+ <option value="5">Productos de Limpieza</option>
+ </select>
+ </div>
+ <div>
+ <label style="font-size:12px; font-weight:700;">Unidad de Medida:</label>
+ <select id="prod-unidad" class="input-control" style="margin-top:4px;">
+ <option value="Caja">Caja</option>
+ <option value="Unidad">Unidad</option>
+ <option value="Saco">Saco</option>
+ <option value="Fardo">Fardo</option>
+ <option value="Paquete">Paquete</option>
+ </select>
+ </div>
+ </div>
+
+ <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+ <div>
+ <label style="font-size:12px; font-weight:700;">Precio Compra (RD$):</label>
+ <input type="number" id="prod-precio-compra" class="input-control" placeholder="0.00">
+ </div>
+ <div>
+ <label style="font-size:12px; font-weight:700;">Precio Mayorista (RD$):</label>
+ <input type="number" id="prod-precio-mayorista" class="input-control" placeholder="0.00">
+ </div>
+ <div>
+ <label style="font-size:12px; font-weight:700;">Precio Detalle (RD$):</label>
+ <input type="number" id="prod-precio-detalle" class="input-control" placeholder="0.00">
+ </div>
+ </div>
+
+ <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+ <div>
+ <label style="font-size:12px; font-weight:700;">Porcentaje ITBIS:</label>
+ <select id="prod-itbis" class="input-control" style="margin-top:4px;">
+ <option value="18">18% (Estándar)</option>
+ <option value="16">16% (Reducido)</option>
+ <option value="0">0% (Exento)</option>
+ </select>
+ </div>
+ <div>
+ <label style="font-size:12px; font-weight:700;">Stock Inicial (Central):</label>
+ <input type="number" id="prod-stock-inicial" class="input-control" placeholder="0">
+ </div>
+ <div>
+ <label style="font-size:12px; font-weight:700;">Stock Mínimo:</label>
+ <input type="number" id="prod-stock-minimo" class="input-control" value="10">
+ </div>
+ </div>
+ </div>
+ <div class="modal-footer">
+ <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+ <button class="btn btn-primary" onclick="guardarProducto()">Guardar Mercancía</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- MODAL 7: EMISIÓN DE FACTURA DGII (MOTOR REAL NCF) -->
+ <div id="modal-emision-ncf" class="modal-backdrop">
+ <div class="modal-card">
+ <div class="modal-header">
+ <h3>Motor Fiscal DGII - Emitir Comprobante NCF</h3>
+ <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+ </div>
+ <div class="modal-body">
+ <div style="background: #f4f0f8; padding: 12px; border-radius: 6px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center;">
+ <div>
+ <div style="font-size: 11px; font-weight:700; color:#666;">VENTA SELECCIONADA:</div>
+ <div style="font-size: 18px; font-weight:800;" id="modal-ncf-venta-info">Venta #0</div>
+ </div>
+ <div style="text-align: right;">
+ <div style="font-size: 11px; font-weight:700; color:#666;">TOTAL TRANSACCIÓN:</div>
+ <div style="font-size: 18px; font-weight:800; color: var(--color-primary);" id="modal-ncf-total-info">RD$ 0.00</div>
+ </div>
+ </div>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Tipo de Comprobante Fiscal DGII a Emitir:</label>
+ <select id="modal-ncf-tipo-select" class="input-control" style="margin-top:4px;" onchange="actualizarPrevisualizacionNCF()">
+ <option value="B02">B02 - Factura de Consumidor Final</option>
+ <option value="B01">B01 - Factura de Crédito Fiscal (Requiere RNC)</option>
+ <option value="B14">B14 - Regímenes Especiales de Tributación</option>
+ <option value="B15">B15 - Comprobante Gubernamental</option>
+ </select>
+ </div>
+
+ <!-- PREVISUALIZACIÓN EN VIVO DEL NCF -->
+ <div style="background: #efe5f8; border: 1px solid #c9a6e8; padding: 14px; border-radius: 8px; margin-bottom: 16px; text-align: center;">
+ <span style="font-size: 11px; font-weight: 800; color: #5a189a; text-transform: uppercase; letter-spacing: 0.5px;">PRÓXIMA SECUENCIA NCF AUTORIZADA POR LA DGII:</span>
+ <div style="font-size: 26px; font-weight: 900; color: #7b2cbf; font-family: monospace; margin-top: 4px;" id="modal-ncf-preview-code">B0200000001</div>
+ <div style="font-size: 11px; color: #5a189a; font-weight: 600; margin-top: 2px;" id="modal-ncf-preview-count">Secuencia disponible en base de datos local</div>
+ </div>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">RNC o Cédula del Cliente (DGII):</label>
+ <input type="text" id="modal-ncf-rnc-input" class="input-control" placeholder="Ej. 101829341 o 00118923412">
+ </div>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Nombre o Razón Social:</label>
+ <input type="text" id="modal-ncf-nombre-input" class="input-control" placeholder="Nombre o Razón Social del Cliente">
+ </div>
+ </div>
+ <div class="modal-footer">
+ <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+ <button class="btn btn-success" onclick="confirmarEmisionNCF()"> Emitir NCF & Transferir a Facturas DGII</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- MODAL 8: EDITAR SECUENCIA NCF DGII -->
+ <div id="modal-editar-secuencia-ncf" class="modal-backdrop">
+ <div class="modal-card">
+ <div class="modal-header">
+ <h3>Editar Secuencia NCF (Autorización DGII)</h3>
+ <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+ </div>
+ <div class="modal-body">
+ <div style="background: #f4f0f8; padding: 12px; border-radius: 6px; margin-bottom: 16px;">
+ <div style="font-size: 11px; font-weight:700; color:#666;">COMPROBANTE A CONFIGURAR:</div>
+ <div style="font-size: 18px; font-weight:800; color: var(--color-primary);" id="modal-secuencia-tipo-title">B01 - Factura de Crédito Fiscal</div>
+ </div>
+
+ <input type="hidden" id="modal-secuencia-id">
+
+ <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+ <div>
+ <label style="font-size:12px; font-weight:700;">Secuencia Inicio (Rango):</label>
+ <input type="number" id="secuencia-inicio" class="input-control" value="1">
+ </div>
+ <div>
+ <label style="font-size:12px; font-weight:700;">Secuencia Fin (Límite):</label>
+ <input type="number" id="secuencia-fin" class="input-control" value="1000">
+ </div>
+ </div>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Secuencia Actual / Próximo Número a Emitir:</label>
+ <input type="number" id="secuencia-actual" class="input-control" style="font-weight: 800; color: var(--color-primary);" placeholder="Ej. 1, 15, 100">
+ <span style="font-size:11px; color:#666;">El próximo NCF generado comenzará en este número.</span>
+ </div>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Fecha de Vencimiento Autorizada por DGII:</label>
+ <input type="date" id="secuencia-vencimiento" class="input-control">
+ </div>
+ </div>
+ <div class="modal-footer">
+ <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+ <button class="btn btn-primary" onclick="guardarEdicionSecuenciaNCF()">Guardar Cambios de Secuencia</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- MODAL 9: REGISTRAR COBRO / ABONO A CLIENTE (CXC) -->
+ <div id="modal-cobro-cxc" class="modal-backdrop">
+ <div class="modal-card">
+ <div class="modal-header">
+ <h3>Registrar Cobro / Abono a Crédito (CXC)</h3>
+ <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+ </div>
+ <div class="modal-body">
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Factura a Crédito Pendiente:</label>
+ <select id="modal-cobro-cxc-select" class="input-control" style="margin-top:4px;" onchange="onCuentaCobrarSelectChange()">
+ <option value="">Cargando facturas pendientes...</option>
+ </select>
+ </div>
+
+ <div style="background: #faf8fc; border: 1px solid var(--border-color); padding: 12px; border-radius: 6px; margin-bottom: 14px; display: flex; justify-content: space-between;">
+ <div>
+ <div style="font-size:11px; color:#666; font-weight:700;">MONTO INICIAL FACTURA:</div>
+ <div style="font-size:16px; font-weight:800;" id="modal-cobro-monto-original">RD$ 0.00</div>
+ </div>
+ <div style="text-align: right;">
+ <div style="font-size:11px; color:#666; font-weight:700;">BALANCE PENDIENTE ACTUAL:</div>
+ <div style="font-size:18px; font-weight:900; color: var(--color-warning);" id="modal-cobro-balance-pendiente">RD$ 0.00</div>
+ </div>
+ </div>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Monto a Cobrar / Abonar (DOP):</label>
+ <input type="number" id="modal-cobro-monto" class="input-control" placeholder="0.00" style="font-size: 18px; font-weight: 800; color: var(--color-success);">
+ </div>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Forma de Pago del Cobro:</label>
+ <select id="modal-cobro-metodo" class="input-control" style="margin-top:4px;">
+ <option value="Efectivo">Efectivo / Contado</option>
+ <option value="Transferencia">Transferencia Bancaria</option>
+ <option value="Cheque">Cheque</option>
+ </select>
+ </div>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Concepto / Notas del Cobro:</label>
+ <input type="text" id="modal-cobro-notas" class="input-control" placeholder="Ej. Abono parcial de cobrador en ruta">
+ </div>
+ </div>
+ <div class="modal-footer">
+ <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+ <button class="btn btn-success" onclick="confirmarCobroCXC()"> Confirmar Cobro & Emitir Recibo</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- MODAL 10: DETALLE DE VENTA Y OPERACIONES (ANULACIÓN B04) -->
+ <div id="modal-detalle-venta" class="modal-backdrop">
+ <div class="modal-card" style="max-width: 750px;">
+ <div class="modal-header">
+ <h3 id="modal-detalle-titulo">Detalle Completo de Transacción / Factura #0</h3>
+ <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+ </div>
+ <div class="modal-body">
+ <div style="background: #faf8fc; border: 1px solid var(--border-color); padding: 14px; border-radius: 6px; margin-bottom: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 13px;">
+ <div>
+ <div><b>Cliente:</b> <span id="modal-detalle-cliente">Cliente Contado</span></div>
+ <div><b>RNC/Cédula:</b> <span id="modal-detalle-rnc">N/A</span></div>
+ <div><b>Comprobante NCF:</b> <code id="modal-detalle-ncf" style="color: var(--color-primary); font-weight:800;">SIN NCF</code></div>
+ </div>
+ <div style="text-align: right;">
+ <div><b>Fecha / Hora:</b> <span id="modal-detalle-fecha">00/00/0000</span></div>
+ <div><b>Almacén Origen:</b> <span id="modal-detalle-almacen">Almacén Central</span></div>
+ <div><b>Forma de Pago:</b> <span id="modal-detalle-pago">Contado</span></div>
+ </div>
+ </div>
+
+ <h4 style="margin-bottom: 8px;">Productos Vendidos en la Transacción:</h4>
+ <table class="data-table" style="margin-bottom: 16px;">
+ <thead>
+ <tr>
+ <th>Código</th>
+ <th>Producto</th>
+ <th>Cant</th>
+ <th>Precio Unit.</th>
+ <th>ITBIS</th>
+ <th>Total (DOP)</th>
+ </tr>
+ </thead>
+ <tbody id="tbl-detalle-venta-items">
+ <tr><td colspan="6" style="text-align:center;">Cargando productos...</td></tr>
+ </tbody>
+ </table>
+
+ <div style="display: flex; justify-content: space-between; align-items: center; background: hsl(215, 28%, 95%); padding: 12px 16px; border-radius: 6px;">
+ <span style="font-size: 13px; font-weight: 700;">ESTADO DE LA VENTA: <span id="modal-detalle-estado" class="badge" style="background:#dcfce7; color:#15803d;">Completada</span></span>
+ <div style="font-size: 18px; font-weight: 900; color: var(--color-primary);">TOTAL GENERAL: <span id="modal-detalle-total">RD$ 0.00</span></div>
+ </div>
+ </div>
+ <div class="modal-footer" style="justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+ <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+ <button class="btn btn-warning" id="btn-anular-venta" onclick="ejecutarAnulacionVenta()"> Anular Venta (B04)</button>
+ <button class="btn btn-danger" id="btn-eliminar-venta-modal" onclick="ejecutarEliminarVentaModal()" style="background: #dc2626; color: white;">🗑️ Eliminar Venta</button>
+ </div>
+ <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+ <button class="btn btn-secondary" onclick="cerrarModales()">Cerrar</button>
+ <button class="btn btn-primary" id="btn-print-ticket-modal"> Ticket</button>
+ <button class="btn btn-primary" id="btn-print-pdf-modal"> Factura PDF</button>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!-- MODAL 11: REGISTRAR ENTRADA DE MERCANCÍA / COMPRA A SUPLIDOR (606 DGII) -->
+  <div id="modal-entrada-compra" class="modal-backdrop">
+    <div class="modal-card" style="max-width: 850px;">
+      <div class="modal-header">
+        <h3 id="modal-compra-titulo">Registrar Entrada de Mercancía / Compra a Suplidor</h3>
+        <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="modal-compra-id">
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-bottom: 14px;">
+          <div>
+            <label style="font-size:12px; font-weight:700;">Proveedor / Suplidor:</label>
+            <div style="display: flex; gap: 6px; margin-top: 4px;">
+              <select id="modal-compra-proveedor-select" class="input-control">
+                <option value="">Cargando proveedores...</option>
+              </select>
+              <button class="btn btn-secondary" onclick="abrirModalNuevoProveedor()" style="white-space: nowrap;">+ Nuevo</button>
+            </div>
+          </div>
+          <div>
+            <label style="font-size:12px; font-weight:700;">Factura / Comprobante Suplidor (Opcional):</label>
+            <input type="text" id="modal-compra-ncf" class="input-control" placeholder="Ej. FACT-00123" style="margin-top: 4px;">
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr 2fr; gap:12px; margin-bottom:14px;">
+          <div>
+            <label style="font-size:12px; font-weight:700;">Fecha de compra:</label>
+            <input type="date" id="modal-compra-fecha" class="input-control" style="margin-top:4px;">
+          </div>
+          <div>
+            <label style="font-size:12px; font-weight:700;">Forma de pago:</label>
+            <select id="modal-compra-tipo-pago" class="input-control" style="margin-top:4px;">
+              <option value="Contado">Contado</option>
+              <option value="Credito">Crédito</option>
+              <option value="Transferencia">Transferencia</option>
+              <option value="Cheque">Cheque</option>
+            </select>
+          </div>
+          <div>
+            <label style="font-size:12px; font-weight:700;">Notas (opcional):</label>
+            <input type="text" id="modal-compra-notas" class="input-control" style="margin-top:4px;" placeholder="Observaciones de la compra">
+          </div>
+        </div>
+
+        <div style="background: #faf8fc; border: 1px solid var(--border-color); padding: 14px; border-radius: 8px; margin-bottom: 16px;">
+          <h4 style="font-size: 13px; font-weight: 700; margin-bottom: 8px; color: var(--color-primary);">Agregar Productos a la Entrada / Compra:</h4>
+          
+          <div style="display: grid; grid-template-columns: 1.5fr 2.5fr 1fr 1fr auto; gap: 10px; align-items: end;">
+            <div>
+              <label style="font-size:11px; font-weight:700;">Buscar Producto (Nombre / ID / Código):</label>
+              <input type="text" id="modal-compra-prod-search" class="input-control" placeholder="Escribe para buscar..." oninput="filtrarProductosCompra(this.value)" style="margin-top: 4px;">
+            </div>
+            <div>
+              <label style="font-size:11px; font-weight:700;">Seleccionar Producto:</label>
+              <select id="modal-compra-prod-select" class="input-control" onchange="onProductoCompraChange()" style="margin-top: 4px;"></select>
+            </div>
+            <div>
+              <label style="font-size:11px; font-weight:700;">Cant Comprada:</label>
+              <input type="number" id="modal-compra-cant" class="input-control" value="1" min="1" style="margin-top: 4px;">
+            </div>
+            <div>
+              <label style="font-size:11px; font-weight:700;">Precio Costo (RD$):</label>
+              <input type="number" id="modal-compra-costo" class="input-control" placeholder="0.00" step="0.01" style="margin-top: 4px;">
+            </div>
+            <div>
+              <button class="btn btn-primary" onclick="agregarItemACompra()" style="white-space: nowrap; height: 38px;">+ Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <h4 style="margin-bottom: 8px; font-size: 14px; font-weight: 700;">Detalle de Mercancía a Ingresar a Almacén Central:</h4>
+        <table class="data-table" style="margin-bottom: 16px;">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Cantidad</th>
+              <th>Costo Unit. (DOP)</th>
+              <th>Subtotal (DOP)</th>
+              <th style="width: 80px; text-align: center;">Acción</th>
+            </tr>
+          </thead>
+          <tbody id="tbl-compra-items">
+            <tr><td colspan="5" style="text-align:center;">No has agregado productos a la compra aún.</td></tr>
+          </tbody>
+        </table>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; background: #f4f0f8; padding: 12px 16px; border-radius: 6px;">
+          <span style="font-size: 13px; font-weight: 700;">ALMACÉN DESTINO: <strong>Almacén Principal Central</strong></span>
+          <div style="font-size: 18px; font-weight: 900; color: var(--color-success);">TOTAL COMPRA: <span id="modal-compra-total">RD$ 0.00</span></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+        <button class="btn btn-success" id="btn-confirmar-compra" onclick="confirmarEntradaCompra()">Confirmar Entrada & Sumar Inventario Central</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: REGISTRAR / EDITAR PROVEEDOR / SUPLIDOR -->
+  <div id="modal-nuevo-proveedor" class="modal-backdrop">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-proveedor-titulo">+ Registrar Nuevo Suplidor / Proveedor</h3>
+        <button onclick="cerrarModalNuevoProveedor()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="prov-id">
+        <div style="margin-bottom: 14px;">
+          <label style="font-size:12px; font-weight:700;">RNC / Cédula / Identificación:</label>
+          <input type="text" id="prov-rnc" class="input-control" placeholder="Ej. 101829341">
+        </div>
+        <div style="margin-bottom: 14px;">
+          <label style="font-size:12px; font-weight:700;">Nombre o Razón Social:</label>
+          <input type="text" id="prov-nombre" class="input-control" placeholder="Ej. Cervecería Nacional Dominicana">
+        </div>
+        <div style="margin-bottom: 14px;">
+          <label style="font-size:12px; font-weight:700;">Teléfono de Contacto:</label>
+          <input type="text" id="prov-telefono" class="input-control" placeholder="Ej. (809) 555-0100">
+        </div>
+        <div style="margin-bottom: 14px;">
+          <label style="font-size:12px; font-weight:700;">Correo Electrónico (Email):</label>
+          <input type="email" id="prov-email" class="input-control" placeholder="Ej. contacto@suplidor.com">
+        </div>
+        <div style="margin-bottom: 14px;">
+          <label style="font-size:12px; font-weight:700;">Dirección / Ubicación:</label>
+          <input type="text" id="prov-direccion" class="input-control" placeholder="Ej. Av. Luperón #12, Santo Domingo">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="cerrarModalNuevoProveedor()">Cancelar</button>
+        <button class="btn btn-primary" onclick="guardarNuevoProveedor()">Guardar Suplidor</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: HISTORIAL DE COMPRAS A UN SUPLIDOR -->
+  <div id="modal-historial-compras-proveedor" class="modal-backdrop">
+    <div class="modal-card" style="max-width: 750px;">
+      <div class="modal-header">
+        <h3 id="modal-historial-suplidor-titulo">Historial de Compras de Mercancía</h3>
+        <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th># Compra</th>
+              <th>Fecha</th>
+              <th>Almacén Destino</th>
+              <th>No. Comprobante</th>
+              <th>Tipo Pago</th>
+              <th>Total Compra (DOP)</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody id="tbl-historial-suplidor-compras">
+            <tr><td colspan="7" style="text-align:center;">Cargando historial de compras...</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="cerrarModales()">Cerrar</button>
+      </div>
+    </div>
+  </div>
+
+ <!-- MODAL 13: REGISTRAR MERMA / MERCANCÍA DAÑADA EN RUTA -->
+ <div id="modal-merma-camion" class="modal-backdrop">
+ <div class="modal-card">
+ <div class="modal-header">
+ <h3> Registrar Merma / Mercancía Rota en Ruta</h3>
+ <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+ </div>
+ <div class="modal-body">
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Camión / Ruta de Reparto:</label>
+ <select id="modal-merma-camion-select" class="input-control" style="margin-top:4px;" onchange="onMermaCamionChange()">
+ <option value="">Cargando vehículos...</option>
+ </select>
+ </div>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Producto Afectado / Roto:</label>
+ <select id="modal-merma-prod-select" class="input-control" style="margin-top:4px;"></select>
+ </div>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Cantidad Rota o Dañada:</label>
+ <input type="number" id="modal-merma-cant" class="input-control" value="1" min="1">
+ </div>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Motivo de la Merma:</label>
+ <input type="text" id="modal-merma-motivo" class="input-control" placeholder="Ej. Botella rota en bache de carretera, empaque averiado">
+ </div>
+ </div>
+ <div class="modal-footer">
+ <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+ <button class="btn btn-warning" onclick="confirmarRegistroMerma()"> Confirmar Merma & Descontar del Camión</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- MODAL 14: CIERRE Y CUADRE GENERAL DE CAJA POS -->
+ <div id="modal-cierre-caja-pos" class="modal-backdrop">
+ <div class="modal-card" style="max-width: 580px;">
+ <div class="modal-header">
+ <h3> Cierre & Cuadre Diario General de Caja POS</h3>
+ <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+ </div>
+ <div class="modal-body">
+ <div style="background: #f4edfa; padding: 12px; border-radius: 6px; border: 1px solid #d9c4ee; margin-bottom: 16px;">
+ <div style="font-size: 11px; font-weight: 700; color: #1e40af;">VENTAS & OPERACIONES DE HOY:</div>
+ <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px;">
+  <div><b>Ventas a Contado:</b> <span id="cierre-ventas-efectivo">RD$ 0.00</span></div>
+  <div><b>Ventas Transferencia:</b> <span id="cierre-ventas-transferencia">RD$ 0.00</span></div>
+  <div><b>Ventas en Cheque:</b> <span id="cierre-ventas-cheque">RD$ 0.00</span></div>
+  <div><b>Ventas a Crédito:</b> <span id="cierre-ventas-credito">RD$ 0.00</span></div>
+  <div style="grid-column: span 2; border-top: 1px solid #d9d3e3; padding-top: 4px; margin-top: 2px;">
+  <b>(-) Gastos del Día Registrados:</b> <span id="cierre-gastos-hoy" style="color: #dc2626;">RD$ 0.00</span>
+  </div>
+ </div>
+ <div style="margin-top: 6px; font-size: 15px; font-weight: 800; color: #5a189a;">
+ Monto Esperado en Caja: <span id="cierre-monto-esperado">RD$ 0.00</span>
+ </div>
+ </div>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700; color: var(--color-primary);">Efectivo Físico Contado en Caja (RD$):</label>
+ <input type="number" id="cierre-efectivo-fisico" class="input-control" placeholder="Ingresa la suma del dinero en efectivo en la gaveta" style="font-size: 16px; font-weight: 800;" oninput="calcularDiferenciaCierreCaja()">
+ </div>
+
+ <div style="margin-bottom: 14px; background: #faf8fc; padding: 12px; border-radius: 6px; border: 1px solid var(--border-color);">
+ <label style="font-size:11px; font-weight:700;">Diferencia de Cuadre:</label>
+ <div id="cierre-diferencia-badge" style="font-size: 18px; font-weight: 900; margin-top: 4px;">RD$ 0.00</div>
+ </div>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Observaciones / Novedades del Turno:</label>
+ <input type="text" id="cierre-notas" class="input-control" placeholder="Ej. Cambio dejado en caja, billete roto retenido">
+ </div>
+ </div>
+ <div class="modal-footer">
+ <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+ <button class="btn btn-primary" onclick="guardarCierreCajaPOS()"> Confirmar Cierre Diario de Caja</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- MODAL 15: TRAZABILIDAD 360° KARDEX DE PRODUCTO -->
+ <div id="modal-kardex-producto" class="modal-backdrop">
+ <div class="modal-card" style="max-width: 850px;">
+ <div class="modal-header">
+ <h3 id="modal-kardex-titulo"> Kardex & Historial de Movimientos de Producto</h3>
+ <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+ </div>
+ <div class="modal-body">
+ <div style="background: #faf8fc; padding: 12px; border-radius: 6px; margin-bottom: 16px; border: 1px solid var(--border-color);" id="kardex-resumen-producto">
+ <!-- Dinámico -->
+ </div>
+
+ <table class="data-table">
+ <thead>
+ <tr>
+ <th>Fecha y Hora</th>
+ <th>Tipo de Movimiento</th>
+ <th>Almacén / Origen</th>
+ <th>Cantidad</th>
+ <th>Stock Anterior</th>
+ <th>Stock Nuevo</th>
+ <th>Referencia / NCF</th>
+ </tr>
+ </thead>
+ <tbody id="tbl-kardex-movimientos">
+ <tr><td colspan="7" style="text-align:center;">Cargando historial Kardex...</td></tr>
+ </tbody>
+ </table>
+ </div>
+ <div class="modal-footer">
+ <button class="btn btn-secondary" onclick="cerrarModales()">Cerrar Kardex</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- MODAL 16: CREAR / EDITAR VEHÍCULO DE REPARTO -->
+ <div id="modal-nuevo-vehiculo" class="modal-backdrop">
+ <div class="modal-card" style="max-width: 500px;">
+ <div class="modal-header">
+ <h3 id="modal-vehiculo-titulo"> Registrar Nuevo Vehículo de Reparto</h3>
+ <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+ </div>
+ <div class="modal-body">
+ <input type="hidden" id="modal-vehiculo-id">
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Nombre / Alias del Vehículo:</label>
+ <input type="text" id="vehiculo-nombre" class="input-control" placeholder="Ej. Furgón 3 - Hyundai H100, Camioneta 4, Camión 3">
+ </div>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Placa del Vehículo:</label>
+ <input type="text" id="vehiculo-placa" class="input-control" placeholder="Ej. L590214">
+ </div>
+
+ <div style="margin-bottom: 14px;">
+ <label style="font-size:12px; font-weight:700;">Chofer Asignado:</label>
+ <input type="text" id="vehiculo-chofer" class="input-control" placeholder="Ej. Carlos Martínez, Pedro Gómez">
+ </div>
+ </div>
+ <div class="modal-footer">
+ <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+ <button class="btn btn-primary" onclick="guardarVehiculo()">Guardar Vehículo</button>
+ </div>
+ </div>
+ </div>
+
+ <!-- MODAL 5: CREAR / EDITAR CLIENTE -->
+ <div id="modal-cliente" class="modal-backdrop">
+   <div class="modal-card">
+     <div class="modal-header">
+       <h3 id="modal-cliente-titulo">Registrar Nuevo Cliente</h3>
+       <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+     </div>
+     <div class="modal-body">
+       <input type="hidden" id="cliente-id">
+       <div style="margin-bottom: 14px;">
+         <label style="font-size:12px; font-weight:700;">Nombre o Razón Social:</label>
+         <input type="text" id="cliente-nombre" class="input-control" placeholder="Ej. Colmado El Progreso SRL">
+       </div>
+     </div>
+     <div class="modal-footer">
+       <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+       <button class="btn btn-primary" onclick="guardarCliente()">Guardar Cliente</button>
+     </div>
+   </div>
+ </div>
+
+  <!-- MODAL EDITAR VENTA PENDIENTE -->
+  <div id="modal-editar-venta" class="modal-backdrop">
+    <div class="modal-card" style="max-width: 850px; width: 95%;">
+      <div class="modal-header">
+        <h3 id="modal-editar-venta-titulo">Editar Venta Pendiente</h3>
+        <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="edit-venta-id">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin-bottom: 16px;">
+          <div>
+            <label style="font-size:12px; font-weight:700;">Cliente / Razón Social:</label>
+            <input type="text" id="edit-venta-cliente" class="input-control" style="margin-top:4px;" placeholder="CLIENTE CONTADO">
+          </div>
+          <div>
+            <label style="font-size:12px; font-weight:700;">RNC / Cédula Cliente:</label>
+            <input type="text" id="edit-venta-rnc" class="input-control" style="margin-top:4px;" placeholder="Opcional">
+          </div>
+          <div>
+            <label style="font-size:12px; font-weight:700;">Tipo de Pago:</label>
+            <select id="edit-venta-tipo-pago" class="input-control" style="margin-top:4px;">
+              <option value="Contado">Contado</option>
+              <option value="Credito">Crédito</option>
+              <option value="Transferencia">Transferencia</option>
+              <option value="Cheque">Cheque</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="font-size: 13px; font-weight: 800; margin-bottom: 8px; color: var(--color-primary);">Artículos & Cantidades en la Venta:</div>
+        <table class="data-table" style="margin-bottom: 16px;">
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th style="width: 100px;">Cant.</th>
+              <th style="width: 140px;">Precio c/u (DOP)</th>
+              <th style="width: 150px;">Subtotal (DOP)</th>
+              <th style="width: 60px; text-align: center;">Acción</th>
+            </tr>
+          </thead>
+          <tbody id="tbl-edit-venta-items">
+            <!-- Dinámico via JS -->
+          </tbody>
+        </table>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; background: #faf8fc; padding: 12px 16px; border-radius: 6px; border: 1px solid #e8e3f0; margin-bottom: 16px;">
+          <div>
+            <button class="btn btn-secondary" style="font-size: 12px;" onclick="agregarFilaEditVenta()">+ Añadir Producto a la Venta</button>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 12px; color: var(--color-text-muted);">Total Recalculado en Tiempo Real:</div>
+            <div style="font-size: 22px; font-weight: 900; color: var(--color-primary);" id="edit-venta-total-display">RD$ 0.00</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+        <button class="btn btn-primary" onclick="guardarEdicionVentaSubmit()">Guardar Cambios en Venta</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: REGISTRAR / EDITAR EMPLEADO -->
+  <div id="modal-empleado" class="modal-backdrop">
+    <div class="modal-card" style="max-width: 550px;">
+      <div class="modal-header">
+        <h3 id="modal-empleado-titulo">Registrar Nuevo Empleado</h3>
+        <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="emp-id">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+          <div>
+            <label style="font-size:12px; font-weight:700;">Cédula / Identificación:</label>
+            <input type="text" id="emp-cedula" class="input-control" placeholder="Ej. 402-1928341-9">
+          </div>
+          <div>
+            <label style="font-size:12px; font-weight:700;">Nombre Completo:</label>
+            <input type="text" id="emp-nombre" class="input-control" placeholder="Ej. Juan Pérez">
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+          <div>
+            <label style="font-size:12px; font-weight:700;">Puesto / Cargo:</label>
+            <input type="text" id="emp-puesto" class="input-control" placeholder="Ej. Chofer de Reparto, Vendedor, Cajero">
+          </div>
+          <div>
+            <label style="font-size:12px; font-weight:700;">Teléfono de Contacto:</label>
+            <input type="text" id="emp-telefono" class="input-control" placeholder="Ej. 809-555-0188">
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 14px;">
+          <div>
+            <label style="font-size:12px; font-weight:700;" id="emp-salario-label">Sueldo por Período (DOP):</label>
+            <input type="number" id="emp-salario" class="input-control" placeholder="0.00" step="0.01">
+          </div>
+          <div>
+            <label style="font-size:12px; font-weight:700;">Frecuencia Pago:</label>
+            <select id="emp-frecuencia" class="input-control" onchange="onFrecuenciaEmpleadoChange()">
+              <option value="Quincenal">Quincenal</option>
+              <option value="Semanal">Semanal</option>
+              <option value="Diario">Diario</option>
+              <option value="Mensual">Mensual</option>
+            </select>
+          </div>
+          <div>
+            <label style="font-size:12px; font-weight:700;" id="emp-dia-pago-label">Día de Pago (1-31):</label>
+            <input type="number" id="emp-dia-pago" class="input-control" placeholder="15" min="1" max="31" value="15">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+        <button class="btn btn-primary" onclick="guardarEmpleadoSubmit()">Guardar Empleado</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: REGISTRAR ADELANTO DE SUELDO -->
+  <div id="modal-adelanto-empleado" class="modal-backdrop">
+    <div class="modal-card" style="max-width: 500px;">
+      <div class="modal-header">
+        <h3>Registrar Adelanto / Avance de Sueldo</h3>
+        <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="margin-bottom: 14px;">
+          <label style="font-size:12px; font-weight:700;">Seleccionar Empleado:</label>
+          <select id="adelanto-empleado-select" class="input-control" style="margin-top: 4px;">
+            <option value="">Cargando empleados...</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 14px;">
+          <label style="font-size:12px; font-weight:700;">Monto Adelantado (DOP):</label>
+          <input type="number" id="adelanto-monto" class="input-control" placeholder="0.00" step="0.01" style="font-size: 16px; font-weight: 800; color: #d97706; margin-top: 4px;">
+        </div>
+
+        <div style="margin-bottom: 14px;">
+          <label style="font-size:12px; font-weight:700;">Concepto / Motivo del Adelanto:</label>
+          <input type="text" id="adelanto-concepto" class="input-control" placeholder="Ej. Avance médico, Préstamo personal" style="margin-top: 4px;">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+        <button class="btn btn-warning" onclick="guardarAdelantoEmpleadoSubmit()">Confirmar Adelanto & Generar Gasto</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: CONFIRMAR RESETEO TOTAL DE BASE DE DATOS A 0 -->
+  <div id="modal-reset-database" class="modal-backdrop">
+    <div class="modal-card" style="max-width: 520px; border-top: 5px solid #dc2626;">
+      <div class="modal-header">
+        <h3 style="color: #dc2626; margin: 0;">⚠️ Peligro: Reiniciar Base de Datos a Cero</h3>
+        <button onclick="cerrarModales()" style="border:none; background:none; font-size:20px; cursor:pointer;">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div id="reset-password-setup" hidden>
+          <p style="font-size: 14px; color: #1b1226; line-height: 1.5;">
+            Antes de usar esta opción, crea una contraseña exclusiva para proteger el borrado. Debe tener al menos 8 caracteres.
+          </p>
+          <label for="input-nueva-clave-reset" style="display:block; margin: 12px 0 6px; font-weight:700;">Nueva contraseña de borrado</label>
+          <input type="password" id="input-nueva-clave-reset" class="input-control" autocomplete="new-password" minlength="8" placeholder="Mínimo 8 caracteres">
+          <label for="input-confirmar-clave-reset" style="display:block; margin: 12px 0 6px; font-weight:700;">Repite la contraseña</label>
+          <input type="password" id="input-confirmar-clave-reset" class="input-control" autocomplete="new-password" minlength="8" placeholder="Confirma la contraseña">
+          <p style="font-size: 12px; color: #6b6578; margin-top: 10px;">Se guardará una huella protegida en este Mac. Si la olvidas, no podrás borrar la base de datos desde el sistema.</p>
+        </div>
+        <div id="reset-password-confirmation" hidden>
+          <p style="font-size: 14px; color: #1b1226; margin-bottom: 12px; line-height: 1.5;">
+            Esta acción elimina <strong>todas las operaciones</strong> y reinicia la base de datos a cero.
+          </p>
+          <div style="background: #fef2f2; border: 1px solid #fecaca; border-radius: 6px; padding: 12px; font-size: 12px; color: #991b1b; margin-bottom: 16px;">
+            <b>Se borrarán irreversiblemente:</b>
+            <ul style="margin: 6px 0 0 16px; padding: 0;">
+              <li>Todas las ventas y facturas emitidas</li>
+              <li>Todas las cuentas por cobrar y pagos de clientes</li>
+              <li>Todos los gastos registrados y pagos de nómina</li>
+              <li>Todas las mermas, traslados y cierres de caja</li>
+              <li>Se restablecerá el stock del catálogo a su inventario inicial</li>
+              <li>Se reiniciarán las secuencias de comprobantes NCF a 1</li>
+            </ul>
+          </div>
+          <label for="input-clave-reset" style="display:block; margin-bottom: 6px; font-weight:700;">Contraseña de borrado</label>
+          <input type="password" id="input-clave-reset" class="input-control" autocomplete="current-password" placeholder="Escribe la contraseña">
+          <p style="font-size: 13px; font-weight: 700; color: #3d3550; margin: 16px 0 8px;">
+            También escribe <span style="color: #dc2626; font-family: monospace; font-size: 15px; font-weight: 900;">BORRAR</span> para confirmar:
+          </p>
+          <input type="text" id="input-confirmar-reset" class="input-control" placeholder="Escribe BORRAR" style="font-size: 14px; font-weight: 800; text-align: center; border: 2px solid #f87171; color: #dc2626;">
+        </div>
+      </div>
+      <div class="modal-footer" style="display: flex; justify-content: space-between;">
+        <button class="btn btn-secondary" onclick="cerrarModales()">Cancelar</button>
+        <button id="btn-configurar-clave-reset" class="btn btn-primary" hidden onclick="configurarPasswordReset()">Guardar contraseña</button>
+        <button id="btn-confirmar-reset" class="btn btn-danger" hidden style="background: #dc2626; color: white; font-weight: 800;" onclick="ejecutarResetDatabase()">Borrar Todo e Iniciar de 0</button>
+      </div>
+    </div>
+  </div>
+
+ <!-- CONTENEDOR OCULTO PARA IMPRESIÓN DIRECTA DE TICKET Y FACTURA DGII -->
+ <div id="print-area"></div>
+
+  <script src="app.js?v=3.1"></script>
+</body>
+</html>

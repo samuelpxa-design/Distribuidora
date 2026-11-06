@@ -1,0 +1,31 @@
+{
+  "name": "sistema-ventas-distribuidora",
+  "version": "1.1.0",
+  "description": "Sistema de Ventas, Facturación DGII, Inventario de Distribuidora y Contabilidad Local",
+  "main": "src/main/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node --no-warnings src/main/index.js",
+    "dev": "node --watch --no-warnings src/main/index.js",
+    "mac": "bash INICIAR_SISTEMA_MAC.command",
+    "update:mac": "bash Actualizar_Sistema_Mac.command",
+    "reset:mac": "bash Resetear_Base_Datos_Mac.command",
+    "app": "electron src/main/electronMain.js",
+    "test": "node --no-warnings tests/flujo_completo.test.js"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "keywords": [
+    "pos",
+    "ventas",
+    "facturacion",
+    "dgii",
+    "distribuidora",
+    "ncf",
+    "contabilidad",
+    "offline"
+  ],
+  "author": "Samuel Ventas Dev Team",
+  "license": "ISC"
+}
